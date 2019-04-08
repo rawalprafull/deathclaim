@@ -21,7 +21,7 @@
 <link href="css/style.css" rel="stylesheet">
 <link href="css/style-1.css" rel="stylesheet">
 <script src="./js/notification.js"></script>
-
+<link href="css/tx-flow-css.css" rel="stylesheet">
 
 </head>
 
@@ -583,7 +583,7 @@
               <th>Claim Status</th>
             </tr>
             <tr ng-repeat="allpaitentRecord in $data">
-              <th>{{allpaitentRecord.pid}}</th>
+              <th><a href="" ng-click="getTxData(allpaitentRecord.pid)" >{{allpaitentRecord.pid}}</a></th>
               <th>{{allpaitentRecord.pname}}</th>
               <th>{{allpaitentRecord.address}}</th>
               <th>{{allpaitentRecord.dod}}</th>
@@ -608,7 +608,13 @@
   <!-- Content Section ends here--> 
   
   <!-- Footer Section starts here-->
-  <footer class="footer">©  copyright 2018</footer>
+  <footer class="footer">
+   <section class="Tx_container">
+	<div class="container__sources">
+	</div>
+   </section>
+   <br>
+  ©  copyright 2018</footer>
   <!-- Footer Section ends here--> 
 </div>
 <script>

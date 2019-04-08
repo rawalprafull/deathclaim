@@ -16,8 +16,131 @@ app.controller('myController', function($scope,$http,NgTableParams){
 	$scope.getAllFuneralHome();
 	$scope.getAllInsurer();
 	$scope.getAllPatientform();
-		
+	$(".Tx_container").hide();
+//	$scope.getTxData();
    }
+
+   $scope.getTxData = function(id){
+	
+	console.log(id);
+	
+	$(".container__sources").html(' ');
+
+	$("#cover-spin").show();
+	
+	var data = {pid:id};
+
+	$http({
+            method: 'POST',
+            url: '/getTxData',
+            data: data
+        }).then(function successCallback(response) {
+            if (response.data.success==true) {
+                $("#cover-spin").hide();
+               
+               var data = response.data.record.docs;
+	       console.log(data);            
+
+	    data.sort(function(x, y){
+   		 return x.timestamp - y.timestamp;
+	   });
+
+		
+           var txDetails = {
+                id : " ",
+                timestamp : " ",
+                owner:" ",
+                patientId : " "
+            };
+
+	     $(".Tx_container").show();	
+
+            for(var i=0;i<data.length;i++)
+            {
+
+                if(data[i].$class=='org.aetna.insurance.PatientRegistration')
+                {
+                    txDetails.id = data[i].transactionId;
+                    txDetails.timestamp = new Date(data[i].timestamp);
+                    txDetails.owner = "Hospital, added new entry";
+                    txDetails.patientId = data[i].pid;
+	
+		    var html = "<div class='sources--markdown'><h3>Transaction details</h3><p>Tx ID : "+txDetails.id+"</p><p>Tx Timestamp : "+txDetails.timestamp+"</p><p>Ledger Modified BY : "+txDetails.owner+"</p><p>Patient ID : "+txDetails.patientId+"</p></div>";
+                    $(".container__sources").append(html);
+
+		
+   		}
+
+                if(data[i].$class=='org.aetna.insurance.VerifyandNotifyBeneficiary')
+                {
+                    txDetails.id = data[i].transactionId;
+                    txDetails.timestamp = new Date(data[i].timestamp);
+                    txDetails.owner = "Insurer, notified to beneficiary";
+                    txDetails.patientId = data[i].pid;
+		
+		     var html = "<svg viewBox='0 0 100 100'><line x1='100' x2='0' y1='60' y2='60'></line></svg><div class='sources--markdown'><h3>Transaction details</h3><p>Tx ID : "+txDetails.id+"</p><p>Tx Timestamp : "+txDetails.timestamp+"</p><p>Ledger Modified BY : "+txDetails.owner+"</p><p>Patient ID : "+txDetails.patientId+"</p></div>";;
+                    $(".container__sources").append(html);
+
+                }
+
+                if(data[i].$class=='org.aetna.insurance.Beneficiaryupdate')
+                {
+                    txDetails.id = data[i].transactionId;
+                    txDetails.timestamp = new Date(data[i].timestamp);
+                    txDetails.owner = "Beneficiary, selected Funeral home";
+                    txDetails.patientId = data[i].pid;
+	
+		    var html = "<svg viewBox='0 0 100 100'><line x1='100' x2='0' y1='60' y2='60'></line></svg><div class='sources--markdown'><h3>Transaction details</h3><p>Tx ID : "+txDetails.id+"</p><p>Tx Timestamp : "+txDetails.timestamp+"</p><p>Ledger Modified BY : "+txDetails.owner+"</p><p>Patient ID : "+txDetails.patientId+"</p></div>";
+                    $(".container__sources").append(html);
+	        	        
+		}
+
+                if(data[i].$class=='org.aetna.insurance.requestcert')
+                {
+                    txDetails.id = data[i].transactionId;
+                    txDetails.timestamp = new Date(data[i].timestamp);
+                    txDetails.owner = "Funeral home, acknowledged.";
+                    txDetails.patientId = data[i].pid;
+
+                    var html = "<svg viewBox='0 0 100 100'><line x1='100' x2='0' y1='60' y2='60'></line></svg><div class='sources--markdown'><h3>Transaction details</h3><p>Tx ID : "+txDetails.id+"</p><p>Tx Timestamp : "+txDetails.timestamp+"</p><p>Ledger Modified BY : "+txDetails.owner+"</p><p>Patient ID : "+txDetails.patientId+"</p></div>";
+		    $(".container__sources").append(html);
+
+                }
+
+                if(data[i].$class=='org.aetna.insurance.providecert')
+                {
+                    txDetails.id = data[i].transactionId;
+                    txDetails.timestamp = new Date(data[i].timestamp);
+                    txDetails.owner = "certificate provider, certificate issued.";
+                    txDetails.patientId = data[i].pid;
+		   
+                    var html = "<svg viewBox='0 0 100 100'><line x1='100' x2='0' y1='60' y2='60'></line></svg><div class='sources--markdown'><h3>Transaction details</h3><p>Tx ID : "+txDetails.id+"</p><p>Tx Timestamp : "+txDetails.timestamp+"</p><p>Ledger Modified BY : "+txDetails.owner+"</p><p>Patient ID : "+txDetails.patientId+"</p></div>";
+		   $(".container__sources").append(html);
+
+                }
+
+                if(data[i].$class=='org.aetna.insurance.claiminitiation')
+                {
+                    txDetails.id = data[i].transactionId;
+                    txDetails.timestamp = new Date(data[i].timestamp);
+                    txDetails.owner = "Insurer, claim approved.";
+                    txDetails.patientId = data[i].pid;
+
+                    var html = "<svg viewBox='0 0 100 100'><line x1='100' x2='0' y1='60' y2='60'></line></svg><div class='sources--markdown'><h3>Transaction details</h3><p>Tx ID : "+txDetails.id+"</p><p>Tx Timestamp : "+txDetails.timestamp+"</p><p>Ledger Modified BY : "+txDetails.owner+"</p><p>Patient ID : "+txDetails.patientId+"</p></div>";
+		   $(".container__sources").append(html);
+
+
+                }
+
+            }
+
+ 
+            } else {
+	       console.log("Error during fetching data from cloudant");
+	  }
+ 	});
+}
+
 	
    $scope.verifyBeneficiary = function (bid) {
 
@@ -94,7 +217,7 @@ app.controller('myController', function($scope,$http,NgTableParams){
 		if(reqby=='beneficiary'){
 			 $scope.bPaitentRecord = response.data.record;			 
 		}
-		
+	  	$scope.getTxData(pid);	
 		//$scope.tableParamsPsearch = new NgTableParams({count: 2}, {counts:[], dataset: $scope.paitentData});	        
 
             } else {
@@ -408,6 +531,8 @@ app.controller('myController', function($scope,$http,NgTableParams){
                                                 y:200
                                         }
                                 });
+
+		$scope.getTxData(pid);
 			
             } else {
 		$("#cover-spin").hide();
@@ -451,7 +576,7 @@ app.controller('myController', function($scope,$http,NgTableParams){
 		data.bid = $('#bid'+data.pid).html();
 		data.bcontact = $('#bcontact'+data.pid).html();
 		data.bemail = $('#bemail'+data.pid).html();		
-
+		var pid = data.pid;
 		
 	
 		data = {
@@ -489,6 +614,7 @@ app.controller('myController', function($scope,$http,NgTableParams){
                                 });
 
 			$scope.getAllPatientform();		
+			$scope.getTxData(pid);
 	
            		 } else {
 				$("#cover-spin").hide();
@@ -550,6 +676,7 @@ app.controller('myController', function($scope,$http,NgTableParams){
                                         }
                                 });
 				   $('#exampleModalCenter'+pid).modal('hide');
+				   $scope.getTxData(pid);
 				   $scope.getAllPatientform();
                          } else {
 				$("#cover-spin").hide();
@@ -570,6 +697,8 @@ app.controller('myController', function($scope,$http,NgTableParams){
 	
 	$scope.providecert = function(data) {
 		
+		var pid = data.pid;	
+	
 		console.log(data.pid);
 		$("#cover-spin").show();
 		
@@ -598,8 +727,8 @@ app.controller('myController', function($scope,$http,NgTableParams){
                                                 y:200
                                         }
                                 });
-	
-	
+				$scope.getTxData(pid);
+			
                          } else {
 				$("#cover-spin").hide();
 				$.notify({
@@ -653,7 +782,7 @@ app.controller('myController', function($scope,$http,NgTableParams){
                                                 y:200
                                         }
                                 });
-		
+				$scope.getTxData(pid);
                          } else {
 				$("#cover-spin").hide();
 				$('.'+pid).modal('hide')
@@ -676,6 +805,7 @@ app.controller('myController', function($scope,$http,NgTableParams){
 	$scope.requestcert = function(data) {
 
 		$("#cover-spin").show();
+		var pid = data.pid;
 
 		var options = { year: 'numeric', month: 'long', day: 'numeric' };		
 	        var funeraldate  = data.funeraldate.toLocaleDateString("en-US",options);
@@ -709,6 +839,7 @@ app.controller('myController', function($scope,$http,NgTableParams){
                                         }
                                 });
 				$scope.fHomeSearchPaitentRecord = '';
+				$scope.getTxData(pid);
                          } else {
 				$("#cover-spin").hide();
 				$.notify({
@@ -839,4 +970,28 @@ app.controller('myController', function($scope,$http,NgTableParams){
 
         }
 
-});	
+	$scope.getHistory = function(pid){
+		
+	
+		var data = {
+ 				 "$class": "org.aetna.insurance.HistoryQuery",
+				  "pid": pid
+			 }
+		console.log(data);
+	
+		$http({
+                            method: 'POST',
+                            url: '/history',
+                            data: data
+                 }).then(function successCallback(response) {
+                         if (response.data.success) {
+			 	console.log(response);
+			 }else{
+				console.log(response);
+			 }
+
+		});
+	
+	}
+
+});		

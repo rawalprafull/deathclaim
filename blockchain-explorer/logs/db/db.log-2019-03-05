@@ -1,0 +1,95 @@
+[2019-03-06 12:36:15.214] [DEBUG] pgservice -  the getRowsBySQlNoCondtion  select c.id as id,c.name as channelName,c.blocks as blocks ,c.channel_genesis_hash as channel_genesis_hash,c.trans as transactions,c.createdt as createdat,c.channel_hash as channel_hash from channel c,
+        peer_ref_channel pc where c.channel_genesis_hash = pc.channelid and pc.peerid='peer0.org1.example.com' group by c.id ,c.name ,c.blocks  ,c.trans ,c.createdt ,c.channel_hash,c.channel_genesis_hash order by c.name 
+[2019-03-06 12:36:15.769] [DEBUG] pgservice -  the getRowsBySQlNoCondtion  select c.id as id,c.name as channelName,c.blocks as blocks ,c.channel_genesis_hash as channel_genesis_hash,c.trans as transactions,c.createdt as createdat,c.channel_hash as channel_hash from channel c,
+        peer_ref_channel pc where c.channel_genesis_hash = pc.channelid and pc.peerid='peer0.org1.example.com' group by c.id ,c.name ,c.blocks  ,c.trans ,c.createdt ,c.channel_hash,c.channel_genesis_hash order by c.name 
+[2019-03-06 12:36:15.796] [DEBUG] pgservice -  the getRowsBySQlQuery  with hours as (
+            select generate_series(
+              date_trunc('hour', now()) - '1day'::interval,
+              date_trunc('hour', now()),
+              '1 hour'::interval
+            ) as datetime
+          )
+          select
+            hours.datetime,
+            count(createdt)
+          from hours
+          left join BLOCKS on date_trunc('hour', BLOCKS.createdt) = hours.datetime and channel_genesis_hash ='9cd51ef83e78573d0c4b1e09b3930de704dca0aa88bceeac69b8835c6b55a4b8'
+          group by 1
+          order by 1 
+[2019-03-06 12:36:15.846] [DEBUG] pgservice -  the getRowsBySQlQuery select a.* from  (
+      select (select c.name from channel c where c.channel_genesis_hash =
+         '9cd51ef83e78573d0c4b1e09b3930de704dca0aa88bceeac69b8835c6b55a4b8' ) as channelname, blocks.blocknum,blocks.txcount ,blocks.datahash ,blocks.blockhash ,blocks.prehash,blocks.createdt,(
+        SELECT  array_agg(txhash) as txhash FROM transactions where blockid = blocks.blocknum  and
+         channel_genesis_hash = '9cd51ef83e78573d0c4b1e09b3930de704dca0aa88bceeac69b8835c6b55a4b8' and createdt between '2019-03-05T12:36:15.846Z' and '2019-03-06T12:36:15.846Z') from blocks where
+         blocks.channel_genesis_hash ='9cd51ef83e78573d0c4b1e09b3930de704dca0aa88bceeac69b8835c6b55a4b8' and blocknum >= 0 and blocks.createdt between '2019-03-05T12:36:15.846Z' and '2019-03-06T12:36:15.846Z'
+         order by blocks.blocknum desc)  a where  a.txhash IS NOT NULL
+[2019-03-06 12:36:16.002] [DEBUG] pgservice -  the getRowsBySQlQuery  select t.creator_msp_id,t.txhash,t.type,t.chaincodename,t.createdt,channel.name as channelName from transactions as t
+       inner join channel on t.channel_genesis_hash=channel.channel_genesis_hash where  t.blockid >= 0 and t.id >= 0  and
+       t.channel_genesis_hash = '9cd51ef83e78573d0c4b1e09b3930de704dca0aa88bceeac69b8835c6b55a4b8'  and t.createdt between '2019-03-05T12:36:16.001Z' and '2019-03-06T12:36:16.001Z'  order by  t.id desc
+[2019-03-06 12:36:16.007] [DEBUG] pgservice -  the getRowsBySQlCase select count(1) c from chaincodes where channel_genesis_hash='9cd51ef83e78573d0c4b1e09b3930de704dca0aa88bceeac69b8835c6b55a4b8' 
+[2019-03-06 12:36:16.008] [DEBUG] pgservice -  the getRowsBySQlCase select count(1) c from transactions where channel_genesis_hash='9cd51ef83e78573d0c4b1e09b3930de704dca0aa88bceeac69b8835c6b55a4b8'
+[2019-03-06 12:36:16.008] [DEBUG] pgservice -  the getRowsBySQlCase select count(1) c from blocks where channel_genesis_hash='9cd51ef83e78573d0c4b1e09b3930de704dca0aa88bceeac69b8835c6b55a4b8'
+[2019-03-06 12:36:16.008] [DEBUG] pgservice -  the getRowsBySQlCase select count(1) c from peer where channel_genesis_hash='9cd51ef83e78573d0c4b1e09b3930de704dca0aa88bceeac69b8835c6b55a4b8' 
+[2019-03-06 12:36:16.022] [DEBUG] pgservice -  the getRowsBySQlNoCondtion  select c.id as id,c.name as channelName,c.blocks as blocks ,c.channel_genesis_hash as channel_genesis_hash,c.trans as transactions,c.createdt as createdat,c.channel_hash as channel_hash from channel c,
+        peer_ref_channel pc where c.channel_genesis_hash = pc.channelid and pc.peerid='peer0.org1.example.com' group by c.id ,c.name ,c.blocks  ,c.trans ,c.createdt ,c.channel_hash,c.channel_genesis_hash order by c.name 
+[2019-03-06 12:36:16.108] [DEBUG] pgservice -  the getRowsBySQlNoCondtion select channel.name as channelName,c.requests as requests,c.channel_genesis_hash as channel_genesis_hash ,
+    c.server_hostname as server_hostname, c.mspid as mspid, c.peer_type as peer_type  from peer as c inner join  channel on
+    c.channel_genesis_hash=channel.channel_genesis_hash where c.channel_genesis_hash='9cd51ef83e78573d0c4b1e09b3930de704dca0aa88bceeac69b8835c6b55a4b8'
+[2019-03-06 12:36:16.192] [DEBUG] pgservice -  the getRowsBySQlQuery  with hours as (
+            select generate_series(
+              date_trunc('hour', now()) - '1day'::interval,
+              date_trunc('hour', now()),
+              '1 hour'::interval
+            ) as datetime
+          )
+          select
+            hours.datetime,
+            count(createdt)
+          from hours
+          left join TRANSACTIONS on date_trunc('hour', TRANSACTIONS.createdt) = hours.datetime and channel_genesis_hash ='9cd51ef83e78573d0c4b1e09b3930de704dca0aa88bceeac69b8835c6b55a4b8'
+          group by 1
+          order by 1 
+[2019-03-06 12:36:16.255] [DEBUG] pgservice -  the getRowsBySQlQuery  with minutes as (
+            select generate_series(
+              date_trunc('min', now()) - '1hour'::interval,
+              date_trunc('min', now()),
+              '1 min'::interval
+            ) as datetime
+          )
+          select
+            minutes.datetime,
+            count(createdt)
+          from minutes
+          left join TRANSACTIONS on date_trunc('min', TRANSACTIONS.createdt) = minutes.datetime and channel_genesis_hash ='9cd51ef83e78573d0c4b1e09b3930de704dca0aa88bceeac69b8835c6b55a4b8'
+          group by 1
+          order by 1 
+[2019-03-06 12:36:16.315] [DEBUG] pgservice -  the getRowsBySQlQuery  with minutes as (
+            select generate_series(
+              date_trunc('min', now()) - '1 hour'::interval,
+              date_trunc('min', now()),
+              '1 min'::interval
+            ) as datetime
+          )
+          select
+            minutes.datetime,
+            count(createdt)
+          from minutes
+          left join BLOCKS on date_trunc('min', BLOCKS.createdt) = minutes.datetime and channel_genesis_hash ='9cd51ef83e78573d0c4b1e09b3930de704dca0aa88bceeac69b8835c6b55a4b8'
+          group by 1
+          order by 1  
+[2019-03-06 12:36:16.321] [DEBUG] pgservice -  the getRowsBySQlNoCondtion select channel.name as channelName,c.requests as requests,c.channel_genesis_hash as channel_genesis_hash ,
+    c.server_hostname as server_hostname, c.mspid as mspid, c.peer_type as peer_type  from peer as c inner join  channel on
+    c.channel_genesis_hash=channel.channel_genesis_hash where c.channel_genesis_hash='9cd51ef83e78573d0c4b1e09b3930de704dca0aa88bceeac69b8835c6b55a4b8'
+[2019-03-06 12:36:16.344] [DEBUG] pgservice -  the getRowsBySQlQuery  select count(creator_msp_id), creator_msp_id
+      from transactions
+      where channel_genesis_hash ='9cd51ef83e78573d0c4b1e09b3930de704dca0aa88bceeac69b8835c6b55a4b8'
+      group by  creator_msp_id
+[2019-03-06 12:36:16.344] [DEBUG] pgservice -  the getRowsBySQlNoCondtion select distinct on (mspid) mspid from peer  where channel_genesis_hash='9cd51ef83e78573d0c4b1e09b3930de704dca0aa88bceeac69b8835c6b55a4b8'
+[2019-03-06 12:36:16.486] [DEBUG] pgservice -  the getRowsBySQlQuery select blocks.blocknum,blocks.txcount ,blocks.datahash ,blocks.blockhash ,blocks.prehash,blocks.createdt,(
+      SELECT  array_agg(txhash) as txhash FROM transactions where blockid = blocks.blocknum and
+       channel_genesis_hash = '9cd51ef83e78573d0c4b1e09b3930de704dca0aa88bceeac69b8835c6b55a4b8' group by transactions.blockid ),
+      channel.name as channelname  from blocks inner join channel on blocks.channel_genesis_hash = channel.channel_genesis_hash  where
+       blocks.channel_genesis_hash ='9cd51ef83e78573d0c4b1e09b3930de704dca0aa88bceeac69b8835c6b55a4b8' and blocknum >= 0
+       order by blocks.blocknum desc limit 3
+[2019-03-06 12:36:16.673] [DEBUG] pgservice -  the getRowsBySQlNoCondtion select  c.name as chaincodename,channel.name as channelName ,c.version as version,c.channel_genesis_hash
+       as channel_genesis_hash,c.path as path ,txcount  as c from chaincodes as c inner join channel on c.channel_genesis_hash=channel.channel_genesis_hash where  c.channel_genesis_hash='9cd51ef83e78573d0c4b1e09b3930de704dca0aa88bceeac69b8835c6b55a4b8' 

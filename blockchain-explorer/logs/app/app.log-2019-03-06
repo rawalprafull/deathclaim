@@ -1,0 +1,8 @@
+[2019-03-06 12:36:15.109] [DEBUG] Proxy - getCurrentChannel >> {"currentChannel":"9cd51ef83e78573d0c4b1e09b3930de704dca0aa88bceeac69b8835c6b55a4b8"}
+[2019-03-06 12:36:15.214] [DEBUG] Proxy - getChannels >> ["composerchannel"]
+[2019-03-06 12:36:15.445] [DEBUG] Proxy - getCurrentChannel >> {"currentChannel":"9cd51ef83e78573d0c4b1e09b3930de704dca0aa88bceeac69b8835c6b55a4b8"}
+[2019-03-06 12:36:15.769] [DEBUG] Proxy - getChannelsInfo >> [{"id":3,"channelname":"composerchannel","blocks":12,"channel_genesis_hash":"9cd51ef83e78573d0c4b1e09b3930de704dca0aa88bceeac69b8835c6b55a4b8","transactions":12,"createdat":"2019-02-28T11:07:16.000Z","channel_hash":""}]
+[2019-03-06 12:36:16.022] [DEBUG] Proxy - getChannels >> ["composerchannel"]
+[2019-03-06 12:36:16.138] [DEBUG] Proxy - getPeersStatus >> [{"requests":"grpc://localhost:7051","server_hostname":"peer0.org1.example.com","channel_genesis_hash":"9cd51ef83e78573d0c4b1e09b3930de704dca0aa88bceeac69b8835c6b55a4b8","mspid":"Org1MSP","peer_type":"PEER","status":"DOWN"}]
+[2019-03-06 12:36:16.329] [DEBUG] Proxy - getPeersStatus >> [{"requests":"grpc://localhost:7051","server_hostname":"peer0.org1.example.com","channel_genesis_hash":"9cd51ef83e78573d0c4b1e09b3930de704dca0aa88bceeac69b8835c6b55a4b8","mspid":"Org1MSP","peer_type":"PEER","status":"DOWN"}]
+[2019-03-06 12:36:26.515] [DEBUG] Proxy - loadChaincodeSrc >> [object Promise]

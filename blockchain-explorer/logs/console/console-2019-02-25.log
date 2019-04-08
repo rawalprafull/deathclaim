@@ -1,0 +1,35 @@
+postgres://hppoc:password@127.0.0.1:5432/fabricexplorer
+
+
+Please open web browser to access ：http://localhost:3000/
+
+
+pid is 11367
+
+
+postgres://hppoc:password@127.0.0.1:5432/fabricexplorer
+
+Sync process is started for the network : [network-1] and client : [client-1]
+
+
+Synchronizer pid is 11391
+
+
+read_set length 1220
+write_set size >>>>>>>>> :  0.5024814605712891 MB
+read_set length 13039
+write_set size >>>>>>>>> :  0.5320215225219727 MB
+Insert sql is INSERT INTO transactions  ( "blockid","txhash","createdt","chaincodename","chaincode_id","status","creator_msp_id","endorser_msp_id","type","read_set","write_set","channel_genesis_hash","validation_code","envelope_signature","payload_extension","creator_nonce","chaincode_proposal_input","endorser_signature","creator_id_bytes","payload_proposal_hash","endorser_id_bytes" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21  ) RETURNING *;
+INSERT ID: 13
+Insert sql is INSERT INTO blocks  ( "blocknum","datahash","prehash","txcount","createdt","prev_blockhash","blockhash","channel_genesis_hash" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8  ) RETURNING *;
+INSERT ID: 8
+<<<<<<<<<<<<<<<<<<<<<<<<<< Synchronizer Error >>>>>>>>>>>>>>>>>>>>>
+Error [ERR_IPC_CHANNEL_CLOSED]: channel closed
+    at process.target.send (internal/child_process.js:588:16)
+    at ForkSenderHandler.send (/home/ubuntu/death-claim/blockchain-explorer/app/sync/sender/ForkSenderHandler.js:16:15)
+    at ExplorerSender.send (/home/ubuntu/death-claim/blockchain-explorer/app/sync/sender/ExplorerSender.js:25:30)
+    at SyncPlatform.send (/home/ubuntu/death-claim/blockchain-explorer/app/platform/fabric/sync/SyncPlatform.js:160:19)
+    at SyncServices.processBlockEvent (/home/ubuntu/death-claim/blockchain-explorer/app/platform/fabric/sync/SyncService.js:587:24)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+<<<<<<<<<<<<<<<<<<<<<<<<<< Closing client processor >>>>>>>>>>>>>>>>>>>>>

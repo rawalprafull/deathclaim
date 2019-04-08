@@ -19,6 +19,7 @@
 <script src="app.js"></script> 
 <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
 <link href="css/style.css" rel="stylesheet">
+<link href="css/tx-flow-css.css" rel="stylesheet">
 <link href="css/style-1.css" rel="stylesheet">
 <script src="./js/notification.js"></script>
 
@@ -330,7 +331,7 @@
                <th>Action</th>
             </tr>
             <tr ng-repeat="bPaitentRecord in $data">
-       		<td>{{bPaitentRecord.pid}}</td>
+       		<td><a href="" ng-click="getTxData(bPaitentRecord.pid)" >{{bPaitentRecord.pid}}</a></td>
                 <td>{{bPaitentRecord.pname}}</td>
                 <td>{{bPaitentRecord.address}}</td>
                 <td>{{bPaitentRecord.dod}}</td>
@@ -660,7 +661,7 @@
               <th>Claim Status</th>
             </tr>
             <tr ng-repeat="allpaitentRecord in $data">
-              <th>{{allpaitentRecord.pid}}</th>
+              <th><a href="" ng-click="getTxData(allpaitentRecord.pid)">{{allpaitentRecord.pid}}</a></th>
               <th>{{allpaitentRecord.pname}}</th>
               <th>{{allpaitentRecord.address}}</th>
               <th>{{allpaitentRecord.dod}}</th>
@@ -685,7 +686,34 @@
   <!-- Content Section ends here--> 
   
   <!-- Footer Section starts here-->
-  <footer class="footer">©  copyright 2018</footer>
+  <footer class="footer">
+
+	
+	<!-- in a wrapping section include different containers for each step of the flow: data sources, build, deploy -->
+<section class="Tx_container">
+
+	<!-- in the sources container show three cards, side by side, or one atop the other on smaller viewports -->
+	<div class="container__sources">
+		
+ <!-- include a simple line to divide the container, and animate it to show a connection between the different containers  
+                <svg viewbox="0 0 100 100">
+    <line x1="100" x2="0" y1="60" y2="60"/>
+  </svg>
+			sourcesdoublehyfunmarkdown
+                <div class="sourcesmarkdown">
+                        <h3>Markdown</h3>
+                        <p>Documentation, Posts, etc.</p>
+                </div>
+-->
+
+	
+	</div>
+
+</section>
+
+©  copyright 2018
+
+</footer>
   <!-- Footer Section ends here--> 
 </div>
 <script>
@@ -754,6 +782,7 @@ $(document).on("contextmenu",function(e){
 });
 */
 </script>
+
 </body>
 </html>
 

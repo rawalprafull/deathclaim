@@ -1,0 +1,351 @@
+[2019-02-26 00:00:49.559] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 00:03:49.568] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 00:06:49.573] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 00:09:49.582] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 00:12:49.589] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 00:15:49.597] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 00:18:49.605] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 00:21:49.612] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 00:24:49.616] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 00:27:49.624] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 00:30:49.627] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 00:33:49.633] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 00:36:49.636] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 00:39:49.640] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 00:42:49.649] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 00:45:49.656] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 00:48:49.662] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 00:51:49.668] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 00:54:49.674] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 00:57:49.680] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 01:00:49.686] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 01:03:49.692] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 01:06:49.695] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 01:09:49.700] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 01:12:49.709] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 01:15:49.717] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 01:18:49.725] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 01:21:49.733] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 01:24:49.740] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 01:27:49.748] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 01:30:49.752] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 01:33:49.757] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 01:36:49.761] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 01:39:49.766] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 01:42:49.770] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 01:45:49.773] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 01:48:49.778] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 01:51:49.782] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 01:54:49.786] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 01:57:49.790] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 02:00:49.793] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 02:03:49.801] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 02:06:49.809] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 02:09:49.816] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 02:12:49.824] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 02:15:49.831] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 02:18:49.838] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 02:21:49.843] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 02:24:49.850] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 02:27:49.857] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 02:30:49.863] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 02:33:49.870] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 02:36:49.877] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 02:39:49.883] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 02:42:49.889] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 02:45:49.899] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 02:48:49.900] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 02:51:49.903] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 02:54:49.907] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 02:57:49.911] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 03:00:49.915] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 03:03:49.921] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 03:06:49.927] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 03:09:49.932] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 03:12:49.937] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 03:15:49.943] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 03:18:49.948] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 03:21:49.953] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 03:24:49.958] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 03:27:49.963] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 03:30:49.966] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 03:33:49.971] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 03:36:49.976] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 03:39:49.980] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 03:42:49.984] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 03:45:49.988] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 03:48:49.992] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 03:51:50.001] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 03:54:50.001] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 03:57:50.005] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 04:00:50.008] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 04:03:50.013] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 04:06:50.014] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 04:09:50.020] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 04:12:50.022] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 04:15:50.032] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 04:18:50.039] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 04:21:50.048] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 04:24:50.052] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 04:27:50.059] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 04:30:50.066] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 04:33:50.073] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 04:36:50.076] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 04:39:50.082] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 04:42:50.085] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 04:45:50.092] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 04:48:50.099] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 04:51:50.104] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 04:54:50.112] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 04:57:50.118] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 05:00:50.125] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 05:03:50.132] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 05:06:50.138] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 05:09:50.145] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 05:12:50.148] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 05:15:50.154] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 05:18:50.161] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 05:21:50.167] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 05:24:50.172] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 05:27:50.178] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 05:30:50.183] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 05:33:50.188] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 05:36:50.192] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 05:39:50.197] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 05:42:50.202] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 05:45:50.207] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 05:48:50.211] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 05:51:50.215] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 05:54:50.219] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 05:57:50.224] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 06:00:50.227] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 06:03:50.233] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 06:06:50.238] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 06:09:50.241] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 06:12:50.244] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 06:15:50.247] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 06:18:50.250] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 06:21:50.258] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 06:24:50.267] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 06:27:50.590] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 06:30:50.470] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 06:33:50.476] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 06:36:50.481] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 06:39:50.487] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 06:42:50.492] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 06:45:50.501] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 06:48:50.510] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 06:51:50.517] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 06:54:50.525] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 06:57:50.532] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 07:00:50.539] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 07:03:50.543] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 07:06:50.552] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 07:09:50.555] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 07:12:50.584] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 07:15:50.569] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 07:18:50.576] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 07:21:50.582] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 07:24:50.589] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 07:27:50.595] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 07:30:50.600] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 07:33:50.607] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 07:36:50.612] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 07:39:50.617] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 07:42:50.622] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 07:45:50.627] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 07:48:50.632] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 07:51:50.637] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 07:54:50.642] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 08:02:27.649] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 6) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' )
+[2019-02-26 08:03:38.880] [DEBUG] pgservice -  the getRowByPkOne sql select count(1) as c from transactions where blockid='7' and txhash='fb8f358c3bf6c7ce464f31658769c3db6f62eadfdb39afd409607179e6d7ba4b' and channel_genesis_hash='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e'
+[2019-02-26 08:03:38.881] [DEBUG] pgservice - Insert sql is INSERT INTO transactions  ( "blockid","txhash","createdt","chaincodename","chaincode_id","status","creator_msp_id","endorser_msp_id","type","read_set","write_set","channel_genesis_hash","validation_code","envelope_signature","payload_extension","creator_nonce","chaincode_proposal_input","endorser_signature","creator_id_bytes","payload_proposal_hash","endorser_id_bytes" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21  ) RETURNING *;
+[2019-02-26 08:03:38.896] [DEBUG] pgservice - --------------------------INSERT----------------------------
+[2019-02-26 08:03:38.896] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-02-26 08:03:38.897] [DEBUG] pgservice - update sql is :  update chaincodes set txcount =txcount+1 where channel_genesis_hash='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e'
+[2019-02-26 08:03:38.898] [DEBUG] pgservice - --------------------------UPDATE----------------------------
+[2019-02-26 08:03:38.898] [DEBUG] pgservice -  update result : undefined
+[2019-02-26 08:03:38.899] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-02-26 08:03:38.899] [DEBUG] pgservice - update sql is :  update channel set trans =trans+1 where channel_genesis_hash='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e'
+[2019-02-26 08:03:38.900] [DEBUG] pgservice - --------------------------UPDATE----------------------------
+[2019-02-26 08:03:38.900] [DEBUG] pgservice -  update result : undefined
+[2019-02-26 08:03:38.900] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-02-26 08:03:38.902] [DEBUG] pgservice -  the getRowByPkOne sql select count(1) as c from blocks where blocknum='7' and txcount='1'
+        and channel_genesis_hash='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e' and prehash='52fff181ad360a223731e511d40f30cbd6c6c4bfab4d3c7239502a694a4bceee' and datahash='e0f0e88a17aab2aaa8821f4d9ed8f02cb33d93cefcc14268fa72609a97cc313f' 
+[2019-02-26 08:03:38.902] [DEBUG] pgservice - Insert sql is INSERT INTO blocks  ( "blocknum","datahash","prehash","txcount","createdt","prev_blockhash","blockhash","channel_genesis_hash" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8  ) RETURNING *;
+[2019-02-26 08:03:38.905] [DEBUG] pgservice - --------------------------INSERT----------------------------
+[2019-02-26 08:03:38.905] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-02-26 08:03:38.905] [DEBUG] pgservice - update sql is :  update channel set blocks =blocks+1 where channel_genesis_hash='0245be6157c9c0a1492704260a828e66abaff55456252466b302e01caf7e9a0e'
+[2019-02-26 08:03:38.906] [DEBUG] pgservice - --------------------------UPDATE----------------------------
+[2019-02-26 08:03:38.906] [DEBUG] pgservice -  update result : undefined
+[2019-02-26 08:03:38.906] [DEBUG] pgservice - -----------------------------------------------------------------
+
+

@@ -1,0 +1,735 @@
+[2019-04-03 08:05:35.265] [INFO] pgservice - Please set logger.setLevel to DEBUG in ./app/helper.js to log the debugging.
+[2019-04-03 08:05:46.204] [INFO] pgservice - Please set logger.setLevel to DEBUG in ./app/helper.js to log the debugging.
+[2019-04-03 08:05:47.623] [DEBUG] pgservice -  the getRowsBySQlCase  select * from channel where name='composerchannel' and channel_genesis_hash='eca4bb804e22bcd235ce1063481e2cdaa6936fc6c008e0668d7b89cf1f4bb529' 
+[2019-04-03 08:05:47.640] [DEBUG] pgservice -  the getRowByPkOne sql select count(1) as c from peer where channel_genesis_hash='eca4bb804e22bcd235ce1063481e2cdaa6936fc6c008e0668d7b89cf1f4bb529' and server_hostname='peer0.org1.example.com' 
+[2019-04-03 08:05:47.640] [DEBUG] pgservice -  the getRowByPkOne sql select count(1) as c from peer_ref_channel prc where prc.peerid = 'peer0.org1.example.com' and prc.channelid='eca4bb804e22bcd235ce1063481e2cdaa6936fc6c008e0668d7b89cf1f4bb529' 
+[2019-04-03 08:05:47.641] [DEBUG] pgservice -  the getRowByPkOne sql select count(1) as c from peer where channel_genesis_hash='eca4bb804e22bcd235ce1063481e2cdaa6936fc6c008e0668d7b89cf1f4bb529' and server_hostname='orderer.example.com' 
+[2019-04-03 08:05:47.642] [DEBUG] pgservice -  the getRowByPkOne sql select count(1) as c from peer_ref_channel prc where prc.peerid = 'orderer.example.com' and prc.channelid='eca4bb804e22bcd235ce1063481e2cdaa6936fc6c008e0668d7b89cf1f4bb529' 
+[2019-04-03 08:05:47.780] [DEBUG] pgservice -  the getRowByPkOne sql select count(1) as c from chaincodes where name='life-insurance' and
+        channel_genesis_hash='eca4bb804e22bcd235ce1063481e2cdaa6936fc6c008e0668d7b89cf1f4bb529' and version='0.0.2-deploy.36' and path='/tmp/businessnetwork11933-23429-rmpb4r.wz9uo'
+[2019-04-03 08:05:47.781] [DEBUG] pgservice - Insert sql is INSERT INTO chaincodes  ( "name","version","path","txcount","createdt","channel_genesis_hash" ) VALUES( $1,$2,$3,$4,$5,$6  ) RETURNING *;
+[2019-04-03 08:05:47.786] [DEBUG] pgservice - --------------------------INSERT----------------------------
+[2019-04-03 08:05:47.786] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-04-03 08:05:47.787] [DEBUG] pgservice -  the getRowByPkOne sql select count(1) as c from peer_ref_chaincode prc where prc.peerid= 'peer0.org1.example.com' and prc.chaincodeid='life-insurance' and cc_version='0.0.2-deploy.36' and channelid='eca4bb804e22bcd235ce1063481e2cdaa6936fc6c008e0668d7b89cf1f4bb529'
+[2019-04-03 08:05:47.787] [DEBUG] pgservice - Insert sql is INSERT INTO peer_ref_chaincode  ( "chaincodeid","cc_version","peerid","channelid" ) VALUES( $1,$2,$3,$4  ) RETURNING *;
+[2019-04-03 08:05:47.789] [DEBUG] pgservice - --------------------------INSERT----------------------------
+[2019-04-03 08:05:47.789] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-04-03 08:05:47.856] [DEBUG] pgservice -  the getRowByPkOne sql select count(1) as c from transactions where blockid='129' and txhash='ed7f5d92c94fcc62cab330efb18c4324cfc8a3ee0c75aa10bb0c98ff8581a0ed' and channel_genesis_hash='eca4bb804e22bcd235ce1063481e2cdaa6936fc6c008e0668d7b89cf1f4bb529'
+[2019-04-03 08:05:47.856] [DEBUG] pgservice - Insert sql is INSERT INTO transactions  ( "blockid","txhash","createdt","chaincodename","chaincode_id","status","creator_msp_id","endorser_msp_id","type","read_set","write_set","channel_genesis_hash","validation_code","envelope_signature","payload_extension","creator_nonce","chaincode_proposal_input","endorser_signature","creator_id_bytes","payload_proposal_hash","endorser_id_bytes" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21  ) RETURNING *;
+[2019-04-03 08:05:47.860] [DEBUG] pgservice - --------------------------INSERT----------------------------
+[2019-04-03 08:05:47.860] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-04-03 08:05:47.860] [DEBUG] pgservice - update sql is :  update chaincodes set txcount =txcount+1 where channel_genesis_hash='eca4bb804e22bcd235ce1063481e2cdaa6936fc6c008e0668d7b89cf1f4bb529'
+[2019-04-03 08:05:47.862] [DEBUG] pgservice - --------------------------UPDATE----------------------------
+[2019-04-03 08:05:47.862] [DEBUG] pgservice -  update result : undefined
+[2019-04-03 08:05:47.862] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-04-03 08:05:47.862] [DEBUG] pgservice - update sql is :  update channel set trans =trans+1 where channel_genesis_hash='eca4bb804e22bcd235ce1063481e2cdaa6936fc6c008e0668d7b89cf1f4bb529'
+[2019-04-03 08:05:47.863] [DEBUG] pgservice - --------------------------UPDATE----------------------------
+[2019-04-03 08:05:47.863] [DEBUG] pgservice -  update result : undefined
+[2019-04-03 08:05:47.863] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-04-03 08:05:47.863] [DEBUG] pgservice -  the getRowByPkOne sql select count(1) as c from blocks where blocknum='129' and txcount='1'
+        and channel_genesis_hash='eca4bb804e22bcd235ce1063481e2cdaa6936fc6c008e0668d7b89cf1f4bb529' and prehash='b26a4e91ef9680306551bfd13b0b4c3027c0654f0668f87ef273e51c9743bef1' and datahash='f554ce27109282a375293af6453cd8d7d98252ea04e95d4d38b7d8da1e580bfa' 
+[2019-04-03 08:05:47.864] [DEBUG] pgservice - Insert sql is INSERT INTO blocks  ( "blocknum","datahash","prehash","txcount","createdt","prev_blockhash","blockhash","channel_genesis_hash" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8  ) RETURNING *;
+[2019-04-03 08:05:47.865] [DEBUG] pgservice - --------------------------INSERT----------------------------
+[2019-04-03 08:05:47.866] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-04-03 08:05:47.866] [DEBUG] pgservice - update sql is :  update channel set blocks =blocks+1 where channel_genesis_hash='eca4bb804e22bcd235ce1063481e2cdaa6936fc6c008e0668d7b89cf1f4bb529'
+[2019-04-03 08:05:47.867] [DEBUG] pgservice - --------------------------UPDATE----------------------------
+[2019-04-03 08:05:47.882] [DEBUG] pgservice -  update result : undefined
+[2019-04-03 08:05:47.882] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-04-03 08:05:49.245] [DEBUG] pgservice -  the getRowsBySQlNoCondtion  select c.id as id,c.name as channelName,c.blocks as blocks ,c.channel_genesis_hash as channel_genesis_hash,c.trans as transactions,c.createdt as createdat,c.channel_hash as channel_hash from channel c,
+        peer_ref_channel pc where c.channel_genesis_hash = pc.channelid and pc.peerid='peer0.org1.example.com' group by c.id ,c.name ,c.blocks  ,c.trans ,c.createdt ,c.channel_hash,c.channel_genesis_hash order by c.name 
+[2019-04-03 08:05:49.558] [DEBUG] pgservice -  the getRowsBySQlQuery select a.* from  (
+      select (select c.name from channel c where c.channel_genesis_hash =
+         'eca4bb804e22bcd235ce1063481e2cdaa6936fc6c008e0668d7b89cf1f4bb529' ) as channelname, blocks.blocknum,blocks.txcount ,blocks.datahash ,blocks.blockhash ,blocks.prehash,blocks.createdt,(
+        SELECT  array_agg(txhash) as txhash FROM transactions where blockid = blocks.blocknum  and
+         channel_genesis_hash = 'eca4bb804e22bcd235ce1063481e2cdaa6936fc6c008e0668d7b89cf1f4bb529' and createdt between '2019-04-02T08:05:49.554Z' and '2019-04-03T08:05:49.554Z') from blocks where
+         blocks.channel_genesis_hash ='eca4bb804e22bcd235ce1063481e2cdaa6936fc6c008e0668d7b89cf1f4bb529' and blocknum >= 0 and blocks.createdt between '2019-04-02T08:05:49.554Z' and '2019-04-03T08:05:49.554Z'
+         order by blocks.blocknum desc)  a where  a.txhash IS NOT NULL
+[2019-04-03 08:05:49.561] [DEBUG] pgservice -  the getRowsBySQlNoCondtion select  c.name as chaincodename,channel.name as channelName ,c.version as version,c.channel_genesis_hash
+       as channel_genesis_hash,c.path as path ,txcount  as c from chaincodes as c inner join channel on c.channel_genesis_hash=channel.channel_genesis_hash where  c.channel_genesis_hash='eca4bb804e22bcd235ce1063481e2cdaa6936fc6c008e0668d7b89cf1f4bb529' 
+[2019-04-03 08:05:52.847] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 129) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='eca4bb804e22bcd235ce1063481e2cdaa6936fc6c008e0668d7b89cf1f4bb529' )
+[2019-04-03 08:05:57.869] [DEBUG] pgservice -  the getRowByPkOne sql select count(1) as c from peer where channel_genesis_hash='eca4bb804e22bcd235ce1063481e2cdaa6936fc6c008e0668d7b89cf1f4bb529' and server_hostname='peer0.org1.example.com' 
+[2019-04-03 08:05:57.870] [DEBUG] pgservice -  the getRowByPkOne sql select count(1) as c from peer_ref_channel prc where prc.peerid = 'peer0.org1.example.com' and prc.channelid='eca4bb804e22bcd235ce1063481e2cdaa6936fc6c008e0668d7b89cf1f4bb529' 
+[2019-04-03 08:05:57.870] [DEBUG] pgservice -  the getRowByPkOne sql select count(1) as c from peer where channel_genesis_hash='eca4bb804e22bcd235ce1063481e2cdaa6936fc6c008e0668d7b89cf1f4bb529' and server_hostname='orderer.example.com' 
+[2019-04-03 08:05:57.871] [DEBUG] pgservice -  the getRowByPkOne sql select count(1) as c from peer_ref_channel prc where prc.peerid = 'orderer.example.com' and prc.channelid='eca4bb804e22bcd235ce1063481e2cdaa6936fc6c008e0668d7b89cf1f4bb529' 
+[2019-04-03 08:05:57.898] [DEBUG] pgservice -  the getRowByPkOne sql select count(1) as c from chaincodes where name='life-insurance' and
+        channel_genesis_hash='eca4bb804e22bcd235ce1063481e2cdaa6936fc6c008e0668d7b89cf1f4bb529' and version='0.0.2-deploy.36' and path='/tmp/businessnetwork11933-23429-rmpb4r.wz9uo'
+[2019-04-03 08:05:57.899] [DEBUG] pgservice -  the getRowByPkOne sql select count(1) as c from peer_ref_chaincode prc where prc.peerid= 'peer0.org1.example.com' and prc.chaincodeid='life-insurance' and cc_version='0.0.2-deploy.36' and channelid='eca4bb804e22bcd235ce1063481e2cdaa6936fc6c008e0668d7b89cf1f4bb529'
+[2019-04-03 08:06:09.405] [DEBUG] pgservice -  the getRowsBySQlQuery  with hours as (
+            select generate_series(
+              date_trunc('hour', now()) - '1day'::interval,
+              date_trunc('hour', now()),
+              '1 hour'::interval
+            ) as datetime
+          )
+          select
+            hours.datetime,
+            count(createdt)
+          from hours
+          left join BLOCKS on date_trunc('hour', BLOCKS.createdt) = hours.datetime and channel_genesis_hash ='eca4bb804e22bcd235ce1063481e2cdaa6936fc6c008e0668d7b89cf1f4bb529'
+          group by 1
+          order by 1 
+[2019-04-03 08:06:09.408] [DEBUG] pgservice -  the getRowsBySQlNoCondtion  select c.id as id,c.name as channelName,c.blocks as blocks ,c.channel_genesis_hash as channel_genesis_hash,c.trans as transactions,c.createdt as createdat,c.channel_hash as channel_hash from channel c,
+        peer_ref_channel pc where c.channel_genesis_hash = pc.channelid and pc.peerid='peer0.org1.example.com' group by c.id ,c.name ,c.blocks  ,c.trans ,c.createdt ,c.channel_hash,c.channel_genesis_hash order by c.name 
+[2019-04-03 08:06:09.628] [DEBUG] pgservice -  the getRowsBySQlQuery  select count(creator_msp_id), creator_msp_id
+      from transactions
+      where channel_genesis_hash ='eca4bb804e22bcd235ce1063481e2cdaa6936fc6c008e0668d7b89cf1f4bb529'
+      group by  creator_msp_id
+[2019-04-03 08:06:09.629] [DEBUG] pgservice -  the getRowsBySQlNoCondtion select distinct on (mspid) mspid from peer  where channel_genesis_hash='eca4bb804e22bcd235ce1063481e2cdaa6936fc6c008e0668d7b89cf1f4bb529'
+[2019-04-03 08:06:09.699] [DEBUG] pgservice -  the getRowsBySQlQuery  with minutes as (
+            select generate_series(
+              date_trunc('min', now()) - '1hour'::interval,
+              date_trunc('min', now()),
+              '1 min'::interval
+            ) as datetime
+          )
+          select
+            minutes.datetime,
+            count(createdt)
+          from minutes
+          left join TRANSACTIONS on date_trunc('min', TRANSACTIONS.createdt) = minutes.datetime and channel_genesis_hash ='eca4bb804e22bcd235ce1063481e2cdaa6936fc6c008e0668d7b89cf1f4bb529'
+          group by 1
+          order by 1 
+[2019-04-03 08:06:09.907] [DEBUG] pgservice -  the getRowsBySQlQuery  with hours as (
+            select generate_series(
+              date_trunc('hour', now()) - '1day'::interval,
+              date_trunc('hour', now()),
+              '1 hour'::interval
+            ) as datetime
+          )
+          select
+            hours.datetime,
+            count(createdt)
+          from hours
+          left join TRANSACTIONS on date_trunc('hour', TRANSACTIONS.createdt) = hours.datetime and channel_genesis_hash ='eca4bb804e22bcd235ce1063481e2cdaa6936fc6c008e0668d7b89cf1f4bb529'
+          group by 1
+          order by 1 
+[2019-04-03 08:06:09.928] [DEBUG] pgservice -  the getRowsBySQlQuery select blocks.blocknum,blocks.txcount ,blocks.datahash ,blocks.blockhash ,blocks.prehash,blocks.createdt,(
+      SELECT  array_agg(txhash) as txhash FROM transactions where blockid = blocks.blocknum and
+       channel_genesis_hash = 'eca4bb804e22bcd235ce1063481e2cdaa6936fc6c008e0668d7b89cf1f4bb529' group by transactions.blockid ),
+      channel.name as channelname  from blocks inner join channel on blocks.channel_genesis_hash = channel.channel_genesis_hash  where
+       blocks.channel_genesis_hash ='eca4bb804e22bcd235ce1063481e2cdaa6936fc6c008e0668d7b89cf1f4bb529' and blocknum >= 0
+       order by blocks.blocknum desc limit 3
+[2019-04-03 08:06:10.001] [DEBUG] pgservice -  the getRowsBySQlQuery  select t.creator_msp_id,t.txhash,t.type,t.chaincodename,t.createdt,channel.name as channelName from transactions as t
+       inner join channel on t.channel_genesis_hash=channel.channel_genesis_hash where  t.blockid >= 0 and t.id >= 0  and
+       t.channel_genesis_hash = 'eca4bb804e22bcd235ce1063481e2cdaa6936fc6c008e0668d7b89cf1f4bb529'  and t.createdt between '2019-04-02T08:06:09.999Z' and '2019-04-03T08:06:09.999Z'  order by  t.id desc
+[2019-04-03 08:06:10.078] [DEBUG] pgservice -  the getRowsBySQlNoCondtion select channel.name as channelName,c.requests as requests,c.channel_genesis_hash as channel_genesis_hash ,
+    c.server_hostname as server_hostname, c.mspid as mspid, c.peer_type as peer_type  from peer as c inner join  channel on
+    c.channel_genesis_hash=channel.channel_genesis_hash where c.channel_genesis_hash='eca4bb804e22bcd235ce1063481e2cdaa6936fc6c008e0668d7b89cf1f4bb529'
+[2019-04-03 08:07:39.559] [DEBUG] pgservice -  the getRowByPkOne sql  select t.txhash,t.validation_code,t.payload_proposal_hash,t.creator_msp_id,t.endorser_msp_id,t.chaincodename,t.type,t.createdt,t.read_set,
+        t.write_set,channel.name as channelName from TRANSACTIONS as t inner join channel on t.channel_genesis_hash=channel.channel_genesis_hash where t.txhash = '162dfd465f13a8d84969567ce8347187cd21d21bb0c0ebce982e14a2b046fab2' 
+[2019-04-03 08:08:47.831] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 129) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='eca4bb804e22bcd235ce1063481e2cdaa6936fc6c008e0668d7b89cf1f4bb529' )
+[2019-04-03 08:11:47.848] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 129) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='eca4bb804e22bcd235ce1063481e2cdaa6936fc6c008e0668d7b89cf1f4bb529' )
+[2019-04-03 08:13:53.720] [DEBUG] pgservice -  the getRowByPkOne sql  select t.txhash,t.validation_code,t.payload_proposal_hash,t.creator_msp_id,t.endorser_msp_id,t.chaincodename,t.type,t.createdt,t.read_set,
+        t.write_set,channel.name as channelName from TRANSACTIONS as t inner join channel on t.channel_genesis_hash=channel.channel_genesis_hash where t.txhash = '66585ddb5770907d21e2a6d17d696eeacb7191acf79713947f35434ae2a6622f' 
+[2019-04-03 08:14:47.855] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 129) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='eca4bb804e22bcd235ce1063481e2cdaa6936fc6c008e0668d7b89cf1f4bb529' )
+[2019-04-03 08:17:47.859] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 129) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='eca4bb804e22bcd235ce1063481e2cdaa6936fc6c008e0668d7b89cf1f4bb529' )
+[2019-04-03 08:18:17.875] [DEBUG] pgservice -  the getRowsBySQlQuery  select t.creator_msp_id,t.txhash,t.type,t.chaincodename,t.createdt,channel.name as channelName from transactions as t
+       inner join channel on t.channel_genesis_hash=channel.channel_genesis_hash where  t.blockid >= 92 and t.id >= 66585  and
+       t.channel_genesis_hash = 'eca4bb804e22bcd235ce1063481e2cdaa6936fc6c008e0668d7b89cf1f4bb529'  and t.createdt between '2019-04-02T08:18:17.874Z' and '2019-04-03T08:18:17.874Z'  order by  t.id desc
+[2019-04-03 08:20:47.868] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 129) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='eca4bb804e22bcd235ce1063481e2cdaa6936fc6c008e0668d7b89cf1f4bb529' )
+[2019-04-03 08:23:47.872] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 129) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='eca4bb804e22bcd235ce1063481e2cdaa6936fc6c008e0668d7b89cf1f4bb529' )
+[2019-04-03 08:26:47.879] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 129) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='eca4bb804e22bcd235ce1063481e2cdaa6936fc6c008e0668d7b89cf1f4bb529' )
+[2019-04-03 08:29:47.886] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 129) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='eca4bb804e22bcd235ce1063481e2cdaa6936fc6c008e0668d7b89cf1f4bb529' )
+[2019-04-03 08:32:47.897] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 129) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='eca4bb804e22bcd235ce1063481e2cdaa6936fc6c008e0668d7b89cf1f4bb529' )
+[2019-04-03 08:35:47.909] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 129) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='eca4bb804e22bcd235ce1063481e2cdaa6936fc6c008e0668d7b89cf1f4bb529' )
+[2019-04-03 12:20:33.077] [INFO] pgservice - Please set logger.setLevel to DEBUG in ./app/helper.js to log the debugging.
+[2019-04-03 12:20:44.620] [INFO] pgservice - Please set logger.setLevel to DEBUG in ./app/helper.js to log the debugging.
+[2019-04-03 12:20:46.227] [DEBUG] pgservice -  the getRowsBySQlCase  select * from channel where name='composerchannel' and channel_genesis_hash='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723' 
+[2019-04-03 12:20:46.231] [DEBUG] pgservice -  the getRowsBySQlCase  select count(1) from channel where name='composerchannel' 
+[2019-04-03 12:20:46.232] [DEBUG] pgservice -  the getRowByPkOne sql select count(1) as c from channel where name='composerchannel' and channel_genesis_hash='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723'
+[2019-04-03 12:20:46.233] [DEBUG] pgservice - Insert sql is INSERT INTO channel  ( "name","createdt","blocks","trans","channel_hash","channel_genesis_hash" ) VALUES( $1,$2,$3,$4,$5,$6  ) RETURNING *;
+[2019-04-03 12:20:46.241] [DEBUG] pgservice - --------------------------INSERT----------------------------
+[2019-04-03 12:20:46.241] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-04-03 12:20:46.263] [DEBUG] pgservice -  the getRowByPkOne sql select count(1) as c from peer where channel_genesis_hash='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723' and server_hostname='peer0.org1.example.com' 
+[2019-04-03 12:20:46.263] [DEBUG] pgservice - Insert sql is INSERT INTO peer  ( "mspid","requests","events","server_hostname","channel_genesis_hash","peer_type" ) VALUES( $1,$2,$3,$4,$5,$6  ) RETURNING *;
+[2019-04-03 12:20:46.265] [DEBUG] pgservice - --------------------------INSERT----------------------------
+[2019-04-03 12:20:46.265] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-04-03 12:20:46.269] [DEBUG] pgservice -  the getRowByPkOne sql select count(1) as c from peer_ref_channel prc where prc.peerid = 'peer0.org1.example.com' and prc.channelid='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723' 
+[2019-04-03 12:20:46.269] [DEBUG] pgservice - Insert sql is INSERT INTO peer_ref_channel  ( "peerid","channelid" ) VALUES( $1,$2  ) RETURNING *;
+[2019-04-03 12:20:46.273] [DEBUG] pgservice - --------------------------INSERT----------------------------
+[2019-04-03 12:20:46.273] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-04-03 12:20:46.274] [DEBUG] pgservice -  the getRowByPkOne sql select count(1) as c from peer where channel_genesis_hash='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723' and server_hostname='orderer.example.com' 
+[2019-04-03 12:20:46.274] [DEBUG] pgservice - Insert sql is INSERT INTO peer  ( "mspid","requests","server_hostname","channel_genesis_hash","peer_type" ) VALUES( $1,$2,$3,$4,$5  ) RETURNING *;
+[2019-04-03 12:20:46.276] [DEBUG] pgservice - --------------------------INSERT----------------------------
+[2019-04-03 12:20:46.276] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-04-03 12:20:46.276] [DEBUG] pgservice -  the getRowByPkOne sql select count(1) as c from peer_ref_channel prc where prc.peerid = 'orderer.example.com' and prc.channelid='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723' 
+[2019-04-03 12:20:46.276] [DEBUG] pgservice - Insert sql is INSERT INTO peer_ref_channel  ( "peerid","channelid" ) VALUES( $1,$2  ) RETURNING *;
+[2019-04-03 12:20:46.278] [DEBUG] pgservice - --------------------------INSERT----------------------------
+[2019-04-03 12:20:46.278] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-04-03 12:20:46.397] [DEBUG] pgservice -  the getRowByPkOne sql select count(1) as c from chaincodes where name='life-insurance' and
+        channel_genesis_hash='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723' and version='0.0.2-deploy.39' and path='/tmp/businessnetwork11933-29080-7c8hu3.o0ypy'
+[2019-04-03 12:20:46.397] [DEBUG] pgservice - Insert sql is INSERT INTO chaincodes  ( "name","version","path","txcount","createdt","channel_genesis_hash" ) VALUES( $1,$2,$3,$4,$5,$6  ) RETURNING *;
+[2019-04-03 12:20:46.399] [DEBUG] pgservice - --------------------------INSERT----------------------------
+[2019-04-03 12:20:46.399] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-04-03 12:20:46.400] [DEBUG] pgservice -  the getRowByPkOne sql select count(1) as c from peer_ref_chaincode prc where prc.peerid= 'peer0.org1.example.com' and prc.chaincodeid='life-insurance' and cc_version='0.0.2-deploy.39' and channelid='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723'
+[2019-04-03 12:20:46.400] [DEBUG] pgservice - Insert sql is INSERT INTO peer_ref_chaincode  ( "chaincodeid","cc_version","peerid","channelid" ) VALUES( $1,$2,$3,$4  ) RETURNING *;
+[2019-04-03 12:20:46.402] [DEBUG] pgservice - --------------------------INSERT----------------------------
+[2019-04-03 12:20:46.402] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-04-03 12:20:46.517] [DEBUG] pgservice -  the getRowByPkOne sql select count(1) as c from transactions where blockid='13' and txhash='a0b470c1827bd072d284c9a3182337f9775be42d11934b14cecc9c87e532051e' and channel_genesis_hash='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723'
+[2019-04-03 12:20:46.518] [DEBUG] pgservice - Insert sql is INSERT INTO transactions  ( "blockid","txhash","createdt","chaincodename","chaincode_id","status","creator_msp_id","endorser_msp_id","type","read_set","write_set","channel_genesis_hash","validation_code","envelope_signature","payload_extension","creator_nonce","chaincode_proposal_input","endorser_signature","creator_id_bytes","payload_proposal_hash","endorser_id_bytes" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21  ) RETURNING *;
+[2019-04-03 12:20:46.527] [DEBUG] pgservice - --------------------------INSERT----------------------------
+[2019-04-03 12:20:46.527] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-04-03 12:20:46.527] [DEBUG] pgservice - update sql is :  update chaincodes set txcount =txcount+1 where channel_genesis_hash='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723'
+[2019-04-03 12:20:46.531] [DEBUG] pgservice - --------------------------UPDATE----------------------------
+[2019-04-03 12:20:46.531] [DEBUG] pgservice -  update result : undefined
+[2019-04-03 12:20:46.531] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-04-03 12:20:46.531] [DEBUG] pgservice - update sql is :  update channel set trans =trans+1 where channel_genesis_hash='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723'
+[2019-04-03 12:20:46.533] [DEBUG] pgservice - --------------------------UPDATE----------------------------
+[2019-04-03 12:20:46.533] [DEBUG] pgservice -  update result : undefined
+[2019-04-03 12:20:46.533] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-04-03 12:20:46.540] [DEBUG] pgservice -  the getRowByPkOne sql select count(1) as c from blocks where blocknum='13' and txcount='1'
+        and channel_genesis_hash='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723' and prehash='11f35e7147cb856f5ccb692305248167870552e9ef7e076e849d2cf4902db423' and datahash='6748bc3b96c841f139221b3e85fdab78f45d48b83b7326e0ebad55eeb0228380' 
+[2019-04-03 12:20:46.540] [DEBUG] pgservice - Insert sql is INSERT INTO blocks  ( "blocknum","datahash","prehash","txcount","createdt","prev_blockhash","blockhash","channel_genesis_hash" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8  ) RETURNING *;
+[2019-04-03 12:20:46.542] [DEBUG] pgservice - --------------------------INSERT----------------------------
+[2019-04-03 12:20:46.542] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-04-03 12:20:46.542] [DEBUG] pgservice - update sql is :  update channel set blocks =blocks+1 where channel_genesis_hash='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723'
+[2019-04-03 12:20:46.543] [DEBUG] pgservice - --------------------------UPDATE----------------------------
+[2019-04-03 12:20:46.543] [DEBUG] pgservice -  update result : undefined
+[2019-04-03 12:20:46.543] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-04-03 12:20:51.521] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 13) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723' )
+[2019-04-03 12:20:51.560] [DEBUG] pgservice -  the getRowByPkOne sql select count(1) as c from transactions where blockid='0' and txhash='' and channel_genesis_hash='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723'
+[2019-04-03 12:20:51.560] [DEBUG] pgservice - Insert sql is INSERT INTO transactions  ( "blockid","txhash","createdt","chaincodename","chaincode_id","status","creator_msp_id","endorser_msp_id","type","read_set","write_set","channel_genesis_hash","validation_code","envelope_signature","payload_extension","creator_nonce","chaincode_proposal_input","endorser_signature","creator_id_bytes","payload_proposal_hash","endorser_id_bytes" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21  ) RETURNING *;
+[2019-04-03 12:20:51.566] [DEBUG] pgservice - --------------------------INSERT----------------------------
+[2019-04-03 12:20:51.567] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-04-03 12:20:51.567] [DEBUG] pgservice - update sql is :  update chaincodes set txcount =txcount+1 where channel_genesis_hash='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723'
+[2019-04-03 12:20:51.568] [DEBUG] pgservice - --------------------------UPDATE----------------------------
+[2019-04-03 12:20:51.568] [DEBUG] pgservice -  update result : undefined
+[2019-04-03 12:20:51.568] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-04-03 12:20:51.568] [DEBUG] pgservice - update sql is :  update channel set trans =trans+1 where channel_genesis_hash='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723'
+[2019-04-03 12:20:51.569] [DEBUG] pgservice - --------------------------UPDATE----------------------------
+[2019-04-03 12:20:51.569] [DEBUG] pgservice -  update result : undefined
+[2019-04-03 12:20:51.569] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-04-03 12:20:51.569] [DEBUG] pgservice -  the getRowByPkOne sql select count(1) as c from blocks where blocknum='0' and txcount='1'
+        and channel_genesis_hash='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723' and prehash='' and datahash='c00232964c0c642138636e27ab0bf0bd7e2d4bcae2703a9b57e1f39ff76a306c' 
+[2019-04-03 12:20:51.569] [DEBUG] pgservice - Insert sql is INSERT INTO blocks  ( "blocknum","datahash","prehash","txcount","createdt","prev_blockhash","blockhash","channel_genesis_hash" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8  ) RETURNING *;
+[2019-04-03 12:20:51.571] [DEBUG] pgservice - --------------------------INSERT----------------------------
+[2019-04-03 12:20:51.571] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-04-03 12:20:51.571] [DEBUG] pgservice - update sql is :  update channel set blocks =blocks+1 where channel_genesis_hash='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723'
+[2019-04-03 12:20:51.572] [DEBUG] pgservice - --------------------------UPDATE----------------------------
+[2019-04-03 12:20:51.572] [DEBUG] pgservice -  update result : undefined
+[2019-04-03 12:20:51.572] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-04-03 12:20:51.594] [DEBUG] pgservice -  the getRowByPkOne sql select count(1) as c from transactions where blockid='1' and txhash='857e76db5d8dcd937d7b51839423c0674b52328ec0bcde83b4a8edd95e02f7e9' and channel_genesis_hash='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723'
+[2019-04-03 12:20:51.594] [DEBUG] pgservice - Insert sql is INSERT INTO transactions  ( "blockid","txhash","createdt","chaincodename","chaincode_id","status","creator_msp_id","endorser_msp_id","type","read_set","write_set","channel_genesis_hash","validation_code","envelope_signature","payload_extension","creator_nonce","chaincode_proposal_input","endorser_signature","creator_id_bytes","payload_proposal_hash","endorser_id_bytes" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21  ) RETURNING *;
+[2019-04-03 12:20:51.600] [DEBUG] pgservice - --------------------------INSERT----------------------------
+[2019-04-03 12:20:51.600] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-04-03 12:20:51.600] [DEBUG] pgservice - update sql is :  update chaincodes set txcount =txcount+1 where channel_genesis_hash='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723'
+[2019-04-03 12:20:51.601] [DEBUG] pgservice - --------------------------UPDATE----------------------------
+[2019-04-03 12:20:51.601] [DEBUG] pgservice -  update result : undefined
+[2019-04-03 12:20:51.601] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-04-03 12:20:51.601] [DEBUG] pgservice - update sql is :  update channel set trans =trans+1 where channel_genesis_hash='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723'
+[2019-04-03 12:20:51.604] [DEBUG] pgservice - --------------------------UPDATE----------------------------
+[2019-04-03 12:20:51.604] [DEBUG] pgservice -  update result : undefined
+[2019-04-03 12:20:51.605] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-04-03 12:20:51.605] [DEBUG] pgservice -  the getRowByPkOne sql select count(1) as c from blocks where blocknum='1' and txcount='1'
+        and channel_genesis_hash='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723' and prehash='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723' and datahash='b4e13bc3e9b38af842ed16c22bfc6aa4d137062956e86201cb8095072060b036' 
+[2019-04-03 12:20:51.605] [DEBUG] pgservice - Insert sql is INSERT INTO blocks  ( "blocknum","datahash","prehash","txcount","createdt","prev_blockhash","blockhash","channel_genesis_hash" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8  ) RETURNING *;
+[2019-04-03 12:20:51.607] [DEBUG] pgservice - --------------------------INSERT----------------------------
+[2019-04-03 12:20:51.607] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-04-03 12:20:51.607] [DEBUG] pgservice - update sql is :  update channel set blocks =blocks+1 where channel_genesis_hash='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723'
+[2019-04-03 12:20:51.608] [DEBUG] pgservice - --------------------------UPDATE----------------------------
+[2019-04-03 12:20:51.608] [DEBUG] pgservice -  update result : undefined
+[2019-04-03 12:20:51.608] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-04-03 12:20:51.625] [DEBUG] pgservice -  the getRowByPkOne sql select count(1) as c from transactions where blockid='2' and txhash='b687554560d65c8942d4d43a220f131bf8c2dc32bbc8033c52cb7f03faef4e71' and channel_genesis_hash='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723'
+[2019-04-03 12:20:51.625] [DEBUG] pgservice - Insert sql is INSERT INTO transactions  ( "blockid","txhash","createdt","chaincodename","chaincode_id","status","creator_msp_id","endorser_msp_id","type","read_set","write_set","channel_genesis_hash","validation_code","envelope_signature","payload_extension","creator_nonce","chaincode_proposal_input","endorser_signature","creator_id_bytes","payload_proposal_hash","endorser_id_bytes" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21  ) RETURNING *;
+[2019-04-03 12:20:51.627] [DEBUG] pgservice - --------------------------INSERT----------------------------
+[2019-04-03 12:20:51.627] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-04-03 12:20:51.627] [DEBUG] pgservice - update sql is :  update chaincodes set txcount =txcount+1 where channel_genesis_hash='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723'
+[2019-04-03 12:20:51.628] [DEBUG] pgservice - --------------------------UPDATE----------------------------
+[2019-04-03 12:20:51.628] [DEBUG] pgservice -  update result : undefined
+[2019-04-03 12:20:51.628] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-04-03 12:20:51.628] [DEBUG] pgservice - update sql is :  update channel set trans =trans+1 where channel_genesis_hash='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723'
+[2019-04-03 12:20:51.629] [DEBUG] pgservice - --------------------------UPDATE----------------------------
+[2019-04-03 12:20:51.629] [DEBUG] pgservice -  update result : undefined
+[2019-04-03 12:20:51.629] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-04-03 12:20:51.630] [DEBUG] pgservice -  the getRowByPkOne sql select count(1) as c from blocks where blocknum='2' and txcount='1'
+        and channel_genesis_hash='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723' and prehash='d6d5f4202700043355bed9be12dd621f2abc942a3f9029fdea207646999d3f8f' and datahash='3639facf6b040ebc1ca101f57f3dd5df0d0288927b4a89efbd2108bf00e669e9' 
+[2019-04-03 12:20:51.630] [DEBUG] pgservice - Insert sql is INSERT INTO blocks  ( "blocknum","datahash","prehash","txcount","createdt","prev_blockhash","blockhash","channel_genesis_hash" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8  ) RETURNING *;
+[2019-04-03 12:20:51.631] [DEBUG] pgservice - --------------------------INSERT----------------------------
+[2019-04-03 12:20:51.631] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-04-03 12:20:51.632] [DEBUG] pgservice - update sql is :  update channel set blocks =blocks+1 where channel_genesis_hash='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723'
+[2019-04-03 12:20:51.632] [DEBUG] pgservice - --------------------------UPDATE----------------------------
+[2019-04-03 12:20:51.632] [DEBUG] pgservice -  update result : undefined
+[2019-04-03 12:20:51.632] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-04-03 12:20:51.656] [DEBUG] pgservice -  the getRowByPkOne sql select count(1) as c from transactions where blockid='3' and txhash='5e659df65bb23d1db203abea51b76d472b818656e72146ea649920b673f6a005' and channel_genesis_hash='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723'
+[2019-04-03 12:20:51.656] [DEBUG] pgservice - Insert sql is INSERT INTO transactions  ( "blockid","txhash","createdt","chaincodename","chaincode_id","status","creator_msp_id","endorser_msp_id","type","read_set","write_set","channel_genesis_hash","validation_code","envelope_signature","payload_extension","creator_nonce","chaincode_proposal_input","endorser_signature","creator_id_bytes","payload_proposal_hash","endorser_id_bytes" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21  ) RETURNING *;
+[2019-04-03 12:20:51.659] [DEBUG] pgservice - --------------------------INSERT----------------------------
+[2019-04-03 12:20:51.659] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-04-03 12:20:51.659] [DEBUG] pgservice - update sql is :  update chaincodes set txcount =txcount+1 where channel_genesis_hash='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723'
+[2019-04-03 12:20:51.660] [DEBUG] pgservice - --------------------------UPDATE----------------------------
+[2019-04-03 12:20:51.660] [DEBUG] pgservice -  update result : undefined
+[2019-04-03 12:20:51.660] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-04-03 12:20:51.660] [DEBUG] pgservice - update sql is :  update channel set trans =trans+1 where channel_genesis_hash='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723'
+[2019-04-03 12:20:51.661] [DEBUG] pgservice - --------------------------UPDATE----------------------------
+[2019-04-03 12:20:51.661] [DEBUG] pgservice -  update result : undefined
+[2019-04-03 12:20:51.661] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-04-03 12:20:51.661] [DEBUG] pgservice -  the getRowByPkOne sql select count(1) as c from blocks where blocknum='3' and txcount='1'
+        and channel_genesis_hash='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723' and prehash='d6a87394a2d3389c5d6390beda656e2ee28c13241c20119a209a4c9aefe95edc' and datahash='f1a96fef8cb6158c013ecf325109970a38054c97c08e11e141c5f4eaa4b70a46' 
+[2019-04-03 12:20:51.661] [DEBUG] pgservice - Insert sql is INSERT INTO blocks  ( "blocknum","datahash","prehash","txcount","createdt","prev_blockhash","blockhash","channel_genesis_hash" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8  ) RETURNING *;
+[2019-04-03 12:20:51.663] [DEBUG] pgservice - --------------------------INSERT----------------------------
+[2019-04-03 12:20:51.663] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-04-03 12:20:51.663] [DEBUG] pgservice - update sql is :  update channel set blocks =blocks+1 where channel_genesis_hash='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723'
+[2019-04-03 12:20:51.664] [DEBUG] pgservice - --------------------------UPDATE----------------------------
+[2019-04-03 12:20:51.664] [DEBUG] pgservice -  update result : undefined
+[2019-04-03 12:20:51.664] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-04-03 12:20:51.679] [DEBUG] pgservice -  the getRowByPkOne sql select count(1) as c from transactions where blockid='4' and txhash='12b01ad0a84da16c0d092068db9e113dead44e44f0bfbe6767cd631a581fb43b' and channel_genesis_hash='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723'
+[2019-04-03 12:20:51.679] [DEBUG] pgservice - Insert sql is INSERT INTO transactions  ( "blockid","txhash","createdt","chaincodename","chaincode_id","status","creator_msp_id","endorser_msp_id","type","read_set","write_set","channel_genesis_hash","validation_code","envelope_signature","payload_extension","creator_nonce","chaincode_proposal_input","endorser_signature","creator_id_bytes","payload_proposal_hash","endorser_id_bytes" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21  ) RETURNING *;
+[2019-04-03 12:20:51.681] [DEBUG] pgservice - --------------------------INSERT----------------------------
+[2019-04-03 12:20:51.682] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-04-03 12:20:51.682] [DEBUG] pgservice - update sql is :  update chaincodes set txcount =txcount+1 where channel_genesis_hash='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723'
+[2019-04-03 12:20:51.683] [DEBUG] pgservice - --------------------------UPDATE----------------------------
+[2019-04-03 12:20:51.683] [DEBUG] pgservice -  update result : undefined
+[2019-04-03 12:20:51.683] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-04-03 12:20:51.683] [DEBUG] pgservice - update sql is :  update channel set trans =trans+1 where channel_genesis_hash='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723'
+[2019-04-03 12:20:51.684] [DEBUG] pgservice - --------------------------UPDATE----------------------------
+[2019-04-03 12:20:51.684] [DEBUG] pgservice -  update result : undefined
+[2019-04-03 12:20:51.684] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-04-03 12:20:51.684] [DEBUG] pgservice -  the getRowByPkOne sql select count(1) as c from blocks where blocknum='4' and txcount='1'
+        and channel_genesis_hash='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723' and prehash='13aaf43b0a34bf18cc74e76feaab7acadcb86b4a8b735be6f4af95b840788b0f' and datahash='82a2ebc81deecbacba52c03178e371767f3bd5d7d15493d43e5998f36d23e656' 
+[2019-04-03 12:20:51.684] [DEBUG] pgservice - Insert sql is INSERT INTO blocks  ( "blocknum","datahash","prehash","txcount","createdt","prev_blockhash","blockhash","channel_genesis_hash" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8  ) RETURNING *;
+[2019-04-03 12:20:51.686] [DEBUG] pgservice - --------------------------INSERT----------------------------
+[2019-04-03 12:20:51.686] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-04-03 12:20:51.686] [DEBUG] pgservice - update sql is :  update channel set blocks =blocks+1 where channel_genesis_hash='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723'
+[2019-04-03 12:20:51.687] [DEBUG] pgservice - --------------------------UPDATE----------------------------
+[2019-04-03 12:20:51.687] [DEBUG] pgservice -  update result : undefined
+[2019-04-03 12:20:51.687] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-04-03 12:20:51.698] [DEBUG] pgservice -  the getRowByPkOne sql select count(1) as c from transactions where blockid='5' and txhash='f4b816a2133e00011aeb8cc7f8a9b1da7b77647f26e7e0cf1c76741cc913d1e7' and channel_genesis_hash='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723'
+[2019-04-03 12:20:51.698] [DEBUG] pgservice - Insert sql is INSERT INTO transactions  ( "blockid","txhash","createdt","chaincodename","chaincode_id","status","creator_msp_id","endorser_msp_id","type","read_set","write_set","channel_genesis_hash","validation_code","envelope_signature","payload_extension","creator_nonce","chaincode_proposal_input","endorser_signature","creator_id_bytes","payload_proposal_hash","endorser_id_bytes" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21  ) RETURNING *;
+[2019-04-03 12:20:51.700] [DEBUG] pgservice - --------------------------INSERT----------------------------
+[2019-04-03 12:20:51.700] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-04-03 12:20:51.700] [DEBUG] pgservice - update sql is :  update chaincodes set txcount =txcount+1 where channel_genesis_hash='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723'
+[2019-04-03 12:20:51.701] [DEBUG] pgservice - --------------------------UPDATE----------------------------
+[2019-04-03 12:20:51.701] [DEBUG] pgservice -  update result : undefined
+[2019-04-03 12:20:51.701] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-04-03 12:20:51.701] [DEBUG] pgservice - update sql is :  update channel set trans =trans+1 where channel_genesis_hash='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723'
+[2019-04-03 12:20:51.703] [DEBUG] pgservice - --------------------------UPDATE----------------------------
+[2019-04-03 12:20:51.704] [DEBUG] pgservice -  update result : undefined
+[2019-04-03 12:20:51.704] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-04-03 12:20:51.704] [DEBUG] pgservice -  the getRowByPkOne sql select count(1) as c from blocks where blocknum='5' and txcount='1'
+        and channel_genesis_hash='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723' and prehash='9e5f2cb7bdc3e79243e054782e1de413443be4aa8ede2e7919a5384224f9c355' and datahash='bcdc0cd05c11696f11311dda11bfcb18923c74cc50f83c5e766de35858bb64a3' 
+[2019-04-03 12:20:51.704] [DEBUG] pgservice - Insert sql is INSERT INTO blocks  ( "blocknum","datahash","prehash","txcount","createdt","prev_blockhash","blockhash","channel_genesis_hash" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8  ) RETURNING *;
+[2019-04-03 12:20:51.706] [DEBUG] pgservice - --------------------------INSERT----------------------------
+[2019-04-03 12:20:51.706] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-04-03 12:20:51.706] [DEBUG] pgservice - update sql is :  update channel set blocks =blocks+1 where channel_genesis_hash='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723'
+[2019-04-03 12:20:51.707] [DEBUG] pgservice - --------------------------UPDATE----------------------------
+[2019-04-03 12:20:51.707] [DEBUG] pgservice -  update result : undefined
+[2019-04-03 12:20:51.707] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-04-03 12:20:51.716] [DEBUG] pgservice -  the getRowByPkOne sql select count(1) as c from transactions where blockid='6' and txhash='7a9802ce7176aed9a5f189a0a7fe93481f85ace77136426bda38bd5a0be4dd6b' and channel_genesis_hash='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723'
+[2019-04-03 12:20:51.716] [DEBUG] pgservice - Insert sql is INSERT INTO transactions  ( "blockid","txhash","createdt","chaincodename","chaincode_id","status","creator_msp_id","endorser_msp_id","type","read_set","write_set","channel_genesis_hash","validation_code","envelope_signature","payload_extension","creator_nonce","chaincode_proposal_input","endorser_signature","creator_id_bytes","payload_proposal_hash","endorser_id_bytes" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21  ) RETURNING *;
+[2019-04-03 12:20:51.726] [DEBUG] pgservice - --------------------------INSERT----------------------------
+[2019-04-03 12:20:51.726] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-04-03 12:20:51.727] [DEBUG] pgservice - update sql is :  update chaincodes set txcount =txcount+1 where channel_genesis_hash='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723'
+[2019-04-03 12:20:51.727] [DEBUG] pgservice - --------------------------UPDATE----------------------------
+[2019-04-03 12:20:51.727] [DEBUG] pgservice -  update result : undefined
+[2019-04-03 12:20:51.727] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-04-03 12:20:51.728] [DEBUG] pgservice - update sql is :  update channel set trans =trans+1 where channel_genesis_hash='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723'
+[2019-04-03 12:20:51.728] [DEBUG] pgservice - --------------------------UPDATE----------------------------
+[2019-04-03 12:20:51.728] [DEBUG] pgservice -  update result : undefined
+[2019-04-03 12:20:51.728] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-04-03 12:20:51.729] [DEBUG] pgservice -  the getRowByPkOne sql select count(1) as c from blocks where blocknum='6' and txcount='1'
+        and channel_genesis_hash='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723' and prehash='49523efcb09352a6bbec730bf209f9f1c13cfbebfa3d4d61a4a7d03ea65b248f' and datahash='da623b38de3cf3e4860ca0ce12acb032ceb48acda70b5c8a9b135f89b1c0e2ef' 
+[2019-04-03 12:20:51.729] [DEBUG] pgservice - Insert sql is INSERT INTO blocks  ( "blocknum","datahash","prehash","txcount","createdt","prev_blockhash","blockhash","channel_genesis_hash" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8  ) RETURNING *;
+[2019-04-03 12:20:51.730] [DEBUG] pgservice - --------------------------INSERT----------------------------
+[2019-04-03 12:20:51.731] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-04-03 12:20:51.731] [DEBUG] pgservice - update sql is :  update channel set blocks =blocks+1 where channel_genesis_hash='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723'
+[2019-04-03 12:20:51.732] [DEBUG] pgservice - --------------------------UPDATE----------------------------
+[2019-04-03 12:20:51.732] [DEBUG] pgservice -  update result : undefined
+[2019-04-03 12:20:51.732] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-04-03 12:20:51.741] [DEBUG] pgservice -  the getRowByPkOne sql select count(1) as c from transactions where blockid='7' and txhash='9c93fe4fb8f14be006c61704dcff915cda54808b0e8358a804f4e2313b845b23' and channel_genesis_hash='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723'
+[2019-04-03 12:20:51.741] [DEBUG] pgservice - Insert sql is INSERT INTO transactions  ( "blockid","txhash","createdt","chaincodename","chaincode_id","status","creator_msp_id","endorser_msp_id","type","read_set","write_set","channel_genesis_hash","validation_code","envelope_signature","payload_extension","creator_nonce","chaincode_proposal_input","endorser_signature","creator_id_bytes","payload_proposal_hash","endorser_id_bytes" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21  ) RETURNING *;
+[2019-04-03 12:20:51.743] [DEBUG] pgservice - --------------------------INSERT----------------------------
+[2019-04-03 12:20:51.743] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-04-03 12:20:51.743] [DEBUG] pgservice - update sql is :  update chaincodes set txcount =txcount+1 where channel_genesis_hash='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723'
+[2019-04-03 12:20:51.744] [DEBUG] pgservice - --------------------------UPDATE----------------------------
+[2019-04-03 12:20:51.744] [DEBUG] pgservice -  update result : undefined
+[2019-04-03 12:20:51.744] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-04-03 12:20:51.744] [DEBUG] pgservice - update sql is :  update channel set trans =trans+1 where channel_genesis_hash='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723'
+[2019-04-03 12:20:51.745] [DEBUG] pgservice - --------------------------UPDATE----------------------------
+[2019-04-03 12:20:51.745] [DEBUG] pgservice -  update result : undefined
+[2019-04-03 12:20:51.745] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-04-03 12:20:51.745] [DEBUG] pgservice -  the getRowByPkOne sql select count(1) as c from blocks where blocknum='7' and txcount='1'
+        and channel_genesis_hash='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723' and prehash='542a345073c9f1b0d20ab258bbe8b2a12d87f3a2b5c3ff4a505458da7c40330c' and datahash='56d7c771e39b1c9f392939704127da82355be4b6908b953f985a035065b72de8' 
+[2019-04-03 12:20:51.745] [DEBUG] pgservice - Insert sql is INSERT INTO blocks  ( "blocknum","datahash","prehash","txcount","createdt","prev_blockhash","blockhash","channel_genesis_hash" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8  ) RETURNING *;
+[2019-04-03 12:20:51.747] [DEBUG] pgservice - --------------------------INSERT----------------------------
+[2019-04-03 12:20:51.747] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-04-03 12:20:51.747] [DEBUG] pgservice - update sql is :  update channel set blocks =blocks+1 where channel_genesis_hash='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723'
+[2019-04-03 12:20:51.748] [DEBUG] pgservice - --------------------------UPDATE----------------------------
+[2019-04-03 12:20:51.748] [DEBUG] pgservice -  update result : undefined
+[2019-04-03 12:20:51.748] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-04-03 12:20:51.758] [DEBUG] pgservice -  the getRowByPkOne sql select count(1) as c from transactions where blockid='8' and txhash='c54876f66acee90fc772df6c3fdff11406670609cbf3a75ee9dd97578f798861' and channel_genesis_hash='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723'
+[2019-04-03 12:20:51.758] [DEBUG] pgservice - Insert sql is INSERT INTO transactions  ( "blockid","txhash","createdt","chaincodename","chaincode_id","status","creator_msp_id","endorser_msp_id","type","read_set","write_set","channel_genesis_hash","validation_code","envelope_signature","payload_extension","creator_nonce","chaincode_proposal_input","endorser_signature","creator_id_bytes","payload_proposal_hash","endorser_id_bytes" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21  ) RETURNING *;
+[2019-04-03 12:20:51.760] [DEBUG] pgservice - --------------------------INSERT----------------------------
+[2019-04-03 12:20:51.761] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-04-03 12:20:51.761] [DEBUG] pgservice - update sql is :  update chaincodes set txcount =txcount+1 where channel_genesis_hash='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723'
+[2019-04-03 12:20:51.762] [DEBUG] pgservice - --------------------------UPDATE----------------------------
+[2019-04-03 12:20:51.762] [DEBUG] pgservice -  update result : undefined
+[2019-04-03 12:20:51.762] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-04-03 12:20:51.762] [DEBUG] pgservice - update sql is :  update channel set trans =trans+1 where channel_genesis_hash='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723'
+[2019-04-03 12:20:51.763] [DEBUG] pgservice - --------------------------UPDATE----------------------------
+[2019-04-03 12:20:51.763] [DEBUG] pgservice -  update result : undefined
+[2019-04-03 12:20:51.763] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-04-03 12:20:51.763] [DEBUG] pgservice -  the getRowByPkOne sql select count(1) as c from blocks where blocknum='8' and txcount='1'
+        and channel_genesis_hash='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723' and prehash='710bc9c0d276fabdcaca4843e780e4ebedc0db5b2d8e87b4d3af71b995b1ed09' and datahash='12709a8f5673de73bc88a3e0c1eb02c878018579f4951051cc708eab70536180' 
+[2019-04-03 12:20:51.763] [DEBUG] pgservice - Insert sql is INSERT INTO blocks  ( "blocknum","datahash","prehash","txcount","createdt","prev_blockhash","blockhash","channel_genesis_hash" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8  ) RETURNING *;
+[2019-04-03 12:20:51.764] [DEBUG] pgservice - --------------------------INSERT----------------------------
+[2019-04-03 12:20:51.765] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-04-03 12:20:51.765] [DEBUG] pgservice - update sql is :  update channel set blocks =blocks+1 where channel_genesis_hash='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723'
+[2019-04-03 12:20:51.766] [DEBUG] pgservice - --------------------------UPDATE----------------------------
+[2019-04-03 12:20:51.766] [DEBUG] pgservice -  update result : undefined
+[2019-04-03 12:20:51.766] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-04-03 12:20:51.781] [DEBUG] pgservice -  the getRowByPkOne sql select count(1) as c from transactions where blockid='9' and txhash='c92e50ccb909a5cce8c0d5a768f672188e3fafe835fdda3cd84049f99345e7db' and channel_genesis_hash='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723'
+[2019-04-03 12:20:51.781] [DEBUG] pgservice - Insert sql is INSERT INTO transactions  ( "blockid","txhash","createdt","chaincodename","chaincode_id","status","creator_msp_id","endorser_msp_id","type","read_set","write_set","channel_genesis_hash","validation_code","envelope_signature","payload_extension","creator_nonce","chaincode_proposal_input","endorser_signature","creator_id_bytes","payload_proposal_hash","endorser_id_bytes" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21  ) RETURNING *;
+[2019-04-03 12:20:51.783] [DEBUG] pgservice - --------------------------INSERT----------------------------
+[2019-04-03 12:20:51.783] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-04-03 12:20:51.783] [DEBUG] pgservice - update sql is :  update chaincodes set txcount =txcount+1 where channel_genesis_hash='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723'
+[2019-04-03 12:20:51.784] [DEBUG] pgservice - --------------------------UPDATE----------------------------
+[2019-04-03 12:20:51.784] [DEBUG] pgservice -  update result : undefined
+[2019-04-03 12:20:51.784] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-04-03 12:20:51.784] [DEBUG] pgservice - update sql is :  update channel set trans =trans+1 where channel_genesis_hash='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723'
+[2019-04-03 12:20:51.785] [DEBUG] pgservice - --------------------------UPDATE----------------------------
+[2019-04-03 12:20:51.785] [DEBUG] pgservice -  update result : undefined
+[2019-04-03 12:20:51.785] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-04-03 12:20:51.786] [DEBUG] pgservice -  the getRowByPkOne sql select count(1) as c from blocks where blocknum='9' and txcount='1'
+        and channel_genesis_hash='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723' and prehash='ab1a8120260fa8042afb9baf47ae829deeb712f58831be2f8ad1d539117fc2de' and datahash='9e9a96fce30c50e9962fa5cdeda2445f745177abc511c684c4843fd031378888' 
+[2019-04-03 12:20:51.786] [DEBUG] pgservice - Insert sql is INSERT INTO blocks  ( "blocknum","datahash","prehash","txcount","createdt","prev_blockhash","blockhash","channel_genesis_hash" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8  ) RETURNING *;
+[2019-04-03 12:20:51.791] [DEBUG] pgservice - --------------------------INSERT----------------------------
+[2019-04-03 12:20:51.791] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-04-03 12:20:51.791] [DEBUG] pgservice - update sql is :  update channel set blocks =blocks+1 where channel_genesis_hash='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723'
+[2019-04-03 12:20:51.792] [DEBUG] pgservice - --------------------------UPDATE----------------------------
+[2019-04-03 12:20:51.792] [DEBUG] pgservice -  update result : undefined
+[2019-04-03 12:20:51.792] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-04-03 12:20:51.815] [DEBUG] pgservice -  the getRowByPkOne sql select count(1) as c from transactions where blockid='10' and txhash='04e919c9d61cf094b6c5aff3ab7836e59ef299e6fc95af33f785ac547fa59208' and channel_genesis_hash='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723'
+[2019-04-03 12:20:51.815] [DEBUG] pgservice - Insert sql is INSERT INTO transactions  ( "blockid","txhash","createdt","chaincodename","chaincode_id","status","creator_msp_id","endorser_msp_id","type","read_set","write_set","channel_genesis_hash","validation_code","envelope_signature","payload_extension","creator_nonce","chaincode_proposal_input","endorser_signature","creator_id_bytes","payload_proposal_hash","endorser_id_bytes" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21  ) RETURNING *;
+[2019-04-03 12:20:51.818] [DEBUG] pgservice - --------------------------INSERT----------------------------
+[2019-04-03 12:20:51.818] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-04-03 12:20:51.818] [DEBUG] pgservice - update sql is :  update chaincodes set txcount =txcount+1 where channel_genesis_hash='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723'
+[2019-04-03 12:20:51.819] [DEBUG] pgservice - --------------------------UPDATE----------------------------
+[2019-04-03 12:20:51.819] [DEBUG] pgservice -  update result : undefined
+[2019-04-03 12:20:51.819] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-04-03 12:20:51.819] [DEBUG] pgservice - update sql is :  update channel set trans =trans+1 where channel_genesis_hash='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723'
+[2019-04-03 12:20:51.820] [DEBUG] pgservice - --------------------------UPDATE----------------------------
+[2019-04-03 12:20:51.820] [DEBUG] pgservice -  update result : undefined
+[2019-04-03 12:20:51.820] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-04-03 12:20:51.821] [DEBUG] pgservice -  the getRowByPkOne sql select count(1) as c from blocks where blocknum='10' and txcount='1'
+        and channel_genesis_hash='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723' and prehash='e05d127202373a5049438dcfad61df75c4dcde8e466532e854d273910f9bf023' and datahash='bd2af50ca5a3b62741bebab401e4dcee4d5f7ca314911528cae4de0a8887d89c' 
+[2019-04-03 12:20:51.821] [DEBUG] pgservice - Insert sql is INSERT INTO blocks  ( "blocknum","datahash","prehash","txcount","createdt","prev_blockhash","blockhash","channel_genesis_hash" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8  ) RETURNING *;
+[2019-04-03 12:20:51.822] [DEBUG] pgservice - --------------------------INSERT----------------------------
+[2019-04-03 12:20:51.822] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-04-03 12:20:51.822] [DEBUG] pgservice - update sql is :  update channel set blocks =blocks+1 where channel_genesis_hash='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723'
+[2019-04-03 12:20:51.823] [DEBUG] pgservice - --------------------------UPDATE----------------------------
+[2019-04-03 12:20:51.823] [DEBUG] pgservice -  update result : undefined
+[2019-04-03 12:20:51.823] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-04-03 12:20:51.842] [DEBUG] pgservice -  the getRowByPkOne sql select count(1) as c from transactions where blockid='11' and txhash='1bec83e6a8e0af773a3f4af612b4e863d85a3fa3c6fa2ffee66cdf0c5d524980' and channel_genesis_hash='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723'
+[2019-04-03 12:20:51.842] [DEBUG] pgservice - Insert sql is INSERT INTO transactions  ( "blockid","txhash","createdt","chaincodename","chaincode_id","status","creator_msp_id","endorser_msp_id","type","read_set","write_set","channel_genesis_hash","validation_code","envelope_signature","payload_extension","creator_nonce","chaincode_proposal_input","endorser_signature","creator_id_bytes","payload_proposal_hash","endorser_id_bytes" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21  ) RETURNING *;
+[2019-04-03 12:20:51.845] [DEBUG] pgservice - --------------------------INSERT----------------------------
+[2019-04-03 12:20:51.845] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-04-03 12:20:51.845] [DEBUG] pgservice - update sql is :  update chaincodes set txcount =txcount+1 where channel_genesis_hash='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723'
+[2019-04-03 12:20:51.846] [DEBUG] pgservice - --------------------------UPDATE----------------------------
+[2019-04-03 12:20:51.846] [DEBUG] pgservice -  update result : undefined
+[2019-04-03 12:20:51.846] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-04-03 12:20:51.846] [DEBUG] pgservice - update sql is :  update channel set trans =trans+1 where channel_genesis_hash='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723'
+[2019-04-03 12:20:51.847] [DEBUG] pgservice - --------------------------UPDATE----------------------------
+[2019-04-03 12:20:51.847] [DEBUG] pgservice -  update result : undefined
+[2019-04-03 12:20:51.847] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-04-03 12:20:51.848] [DEBUG] pgservice -  the getRowByPkOne sql select count(1) as c from blocks where blocknum='11' and txcount='1'
+        and channel_genesis_hash='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723' and prehash='33a0e6d63af7231cb09eb75dca54fa20a848ba2c07738a07bdca70d9f60aa3d8' and datahash='5851eb503257cd4f56e62dcf4a896d602eadb95d9a865a4b4d2c6fe5e65aeda3' 
+[2019-04-03 12:20:51.848] [DEBUG] pgservice - Insert sql is INSERT INTO blocks  ( "blocknum","datahash","prehash","txcount","createdt","prev_blockhash","blockhash","channel_genesis_hash" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8  ) RETURNING *;
+[2019-04-03 12:20:51.849] [DEBUG] pgservice - --------------------------INSERT----------------------------
+[2019-04-03 12:20:51.849] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-04-03 12:20:51.849] [DEBUG] pgservice - update sql is :  update channel set blocks =blocks+1 where channel_genesis_hash='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723'
+[2019-04-03 12:20:51.850] [DEBUG] pgservice - --------------------------UPDATE----------------------------
+[2019-04-03 12:20:51.850] [DEBUG] pgservice -  update result : undefined
+[2019-04-03 12:20:51.850] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-04-03 12:20:51.859] [DEBUG] pgservice -  the getRowByPkOne sql select count(1) as c from transactions where blockid='12' and txhash='f1e75cff27c1f85d95d82bc176cc99086d3e706900b66fb61dbfffd14c7c6698' and channel_genesis_hash='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723'
+[2019-04-03 12:20:51.859] [DEBUG] pgservice - Insert sql is INSERT INTO transactions  ( "blockid","txhash","createdt","chaincodename","chaincode_id","status","creator_msp_id","endorser_msp_id","type","read_set","write_set","channel_genesis_hash","validation_code","envelope_signature","payload_extension","creator_nonce","chaincode_proposal_input","endorser_signature","creator_id_bytes","payload_proposal_hash","endorser_id_bytes" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21  ) RETURNING *;
+[2019-04-03 12:20:51.862] [DEBUG] pgservice - --------------------------INSERT----------------------------
+[2019-04-03 12:20:51.862] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-04-03 12:20:51.862] [DEBUG] pgservice - update sql is :  update chaincodes set txcount =txcount+1 where channel_genesis_hash='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723'
+[2019-04-03 12:20:51.863] [DEBUG] pgservice - --------------------------UPDATE----------------------------
+[2019-04-03 12:20:51.863] [DEBUG] pgservice -  update result : undefined
+[2019-04-03 12:20:51.863] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-04-03 12:20:51.863] [DEBUG] pgservice - update sql is :  update channel set trans =trans+1 where channel_genesis_hash='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723'
+[2019-04-03 12:20:51.864] [DEBUG] pgservice - --------------------------UPDATE----------------------------
+[2019-04-03 12:20:51.864] [DEBUG] pgservice -  update result : undefined
+[2019-04-03 12:20:51.864] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-04-03 12:20:51.864] [DEBUG] pgservice -  the getRowByPkOne sql select count(1) as c from blocks where blocknum='12' and txcount='1'
+        and channel_genesis_hash='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723' and prehash='983a1afa7402800a415ef8336649960c7fa23d8f0002aa14e145a1b190899f3d' and datahash='9ea9fa212ef72c2155603b9e43cfe0f6c1f12198b3cdb89f5dbb2b874d0d8e60' 
+[2019-04-03 12:20:51.864] [DEBUG] pgservice - Insert sql is INSERT INTO blocks  ( "blocknum","datahash","prehash","txcount","createdt","prev_blockhash","blockhash","channel_genesis_hash" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8  ) RETURNING *;
+[2019-04-03 12:20:51.866] [DEBUG] pgservice - --------------------------INSERT----------------------------
+[2019-04-03 12:20:51.866] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-04-03 12:20:51.866] [DEBUG] pgservice - update sql is :  update channel set blocks =blocks+1 where channel_genesis_hash='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723'
+[2019-04-03 12:20:51.867] [DEBUG] pgservice - --------------------------UPDATE----------------------------
+[2019-04-03 12:20:51.867] [DEBUG] pgservice -  update result : undefined
+[2019-04-03 12:20:51.867] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-04-03 12:21:01.584] [DEBUG] pgservice -  the getRowByPkOne sql select count(1) as c from peer where channel_genesis_hash='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723' and server_hostname='peer0.org1.example.com' 
+[2019-04-03 12:21:01.584] [DEBUG] pgservice -  the getRowByPkOne sql select count(1) as c from peer_ref_channel prc where prc.peerid = 'peer0.org1.example.com' and prc.channelid='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723' 
+[2019-04-03 12:21:01.585] [DEBUG] pgservice -  the getRowByPkOne sql select count(1) as c from peer where channel_genesis_hash='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723' and server_hostname='orderer.example.com' 
+[2019-04-03 12:21:01.585] [DEBUG] pgservice -  the getRowByPkOne sql select count(1) as c from peer_ref_channel prc where prc.peerid = 'orderer.example.com' and prc.channelid='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723' 
+[2019-04-03 12:21:01.628] [DEBUG] pgservice -  the getRowByPkOne sql select count(1) as c from peer where channel_genesis_hash='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723' and server_hostname='peer0.org1.example.com' 
+[2019-04-03 12:21:01.629] [DEBUG] pgservice -  the getRowByPkOne sql select count(1) as c from peer_ref_channel prc where prc.peerid = 'peer0.org1.example.com' and prc.channelid='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723' 
+[2019-04-03 12:21:01.630] [DEBUG] pgservice -  the getRowByPkOne sql select count(1) as c from peer where channel_genesis_hash='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723' and server_hostname='orderer.example.com' 
+[2019-04-03 12:21:01.630] [DEBUG] pgservice -  the getRowByPkOne sql select count(1) as c from peer_ref_channel prc where prc.peerid = 'orderer.example.com' and prc.channelid='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723' 
+[2019-04-03 12:21:01.659] [DEBUG] pgservice -  the getRowByPkOne sql select count(1) as c from chaincodes where name='life-insurance' and
+        channel_genesis_hash='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723' and version='0.0.2-deploy.39' and path='/tmp/businessnetwork11933-29080-7c8hu3.o0ypy'
+[2019-04-03 12:21:01.660] [DEBUG] pgservice -  the getRowByPkOne sql select count(1) as c from peer_ref_chaincode prc where prc.peerid= 'peer0.org1.example.com' and prc.chaincodeid='life-insurance' and cc_version='0.0.2-deploy.39' and channelid='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723'
+[2019-04-03 12:21:01.670] [DEBUG] pgservice -  the getRowByPkOne sql select count(1) as c from chaincodes where name='life-insurance' and
+        channel_genesis_hash='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723' and version='0.0.2-deploy.39' and path='/tmp/businessnetwork11933-29080-7c8hu3.o0ypy'
+[2019-04-03 12:21:01.670] [DEBUG] pgservice -  the getRowByPkOne sql select count(1) as c from peer_ref_chaincode prc where prc.peerid= 'peer0.org1.example.com' and prc.chaincodeid='life-insurance' and cc_version='0.0.2-deploy.39' and channelid='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723'
+[2019-04-03 12:21:01.849] [DEBUG] pgservice -  the getRowByPkOne sql select count(1) as c from peer where channel_genesis_hash='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723' and server_hostname='peer0.org1.example.com' 
+[2019-04-03 12:21:01.850] [DEBUG] pgservice -  the getRowByPkOne sql select count(1) as c from peer_ref_channel prc where prc.peerid = 'peer0.org1.example.com' and prc.channelid='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723' 
+[2019-04-03 12:21:01.851] [DEBUG] pgservice -  the getRowByPkOne sql select count(1) as c from peer where channel_genesis_hash='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723' and server_hostname='orderer.example.com' 
+[2019-04-03 12:21:01.851] [DEBUG] pgservice -  the getRowByPkOne sql select count(1) as c from peer_ref_channel prc where prc.peerid = 'orderer.example.com' and prc.channelid='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723' 
+[2019-04-03 12:21:01.877] [DEBUG] pgservice -  the getRowByPkOne sql select count(1) as c from chaincodes where name='life-insurance' and
+        channel_genesis_hash='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723' and version='0.0.2-deploy.39' and path='/tmp/businessnetwork11933-29080-7c8hu3.o0ypy'
+[2019-04-03 12:21:01.877] [DEBUG] pgservice -  the getRowByPkOne sql select count(1) as c from peer_ref_chaincode prc where prc.peerid= 'peer0.org1.example.com' and prc.chaincodeid='life-insurance' and cc_version='0.0.2-deploy.39' and channelid='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723'
+[2019-04-03 12:23:46.479] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 13) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723' )
+[2019-04-03 12:25:48.689] [DEBUG] pgservice -  the getRowByPkOne sql select count(1) as c from transactions where blockid='14' and txhash='01296e3502f21fadb11caf2b14ac49a2578a103f9b1bcb9a663b847effb1ffc8' and channel_genesis_hash='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723'
+[2019-04-03 12:25:48.689] [DEBUG] pgservice - Insert sql is INSERT INTO transactions  ( "blockid","txhash","createdt","chaincodename","chaincode_id","status","creator_msp_id","endorser_msp_id","type","read_set","write_set","channel_genesis_hash","validation_code","envelope_signature","payload_extension","creator_nonce","chaincode_proposal_input","endorser_signature","creator_id_bytes","payload_proposal_hash","endorser_id_bytes" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21  ) RETURNING *;
+[2019-04-03 12:25:48.692] [DEBUG] pgservice - --------------------------INSERT----------------------------
+[2019-04-03 12:25:48.692] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-04-03 12:25:48.692] [DEBUG] pgservice - update sql is :  update chaincodes set txcount =txcount+1 where channel_genesis_hash='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723'
+[2019-04-03 12:25:48.693] [DEBUG] pgservice - --------------------------UPDATE----------------------------
+[2019-04-03 12:25:48.693] [DEBUG] pgservice -  update result : undefined
+[2019-04-03 12:25:48.693] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-04-03 12:25:48.693] [DEBUG] pgservice - update sql is :  update channel set trans =trans+1 where channel_genesis_hash='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723'
+[2019-04-03 12:25:48.694] [DEBUG] pgservice - --------------------------UPDATE----------------------------
+[2019-04-03 12:25:48.695] [DEBUG] pgservice -  update result : undefined
+[2019-04-03 12:25:48.695] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-04-03 12:25:48.695] [DEBUG] pgservice -  the getRowByPkOne sql select count(1) as c from blocks where blocknum='14' and txcount='1'
+        and channel_genesis_hash='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723' and prehash='10da0e3a8ee4b45348279580f4a69c8be5841958ed81ee7e1c06939c1be1a728' and datahash='6ae6a5f6d55fee9a4dd5bacc887ad2632679b17cc72374d58c2d28d7d53cbddd' 
+[2019-04-03 12:25:48.695] [DEBUG] pgservice - Insert sql is INSERT INTO blocks  ( "blocknum","datahash","prehash","txcount","createdt","prev_blockhash","blockhash","channel_genesis_hash" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8  ) RETURNING *;
+[2019-04-03 12:25:48.704] [DEBUG] pgservice - --------------------------INSERT----------------------------
+[2019-04-03 12:25:48.704] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-04-03 12:25:48.704] [DEBUG] pgservice - update sql is :  update channel set blocks =blocks+1 where channel_genesis_hash='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723'
+[2019-04-03 12:25:48.705] [DEBUG] pgservice - --------------------------UPDATE----------------------------
+[2019-04-03 12:25:48.705] [DEBUG] pgservice -  update result : undefined
+[2019-04-03 12:25:48.705] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-04-03 12:26:14.229] [DEBUG] pgservice -  the getRowByPkOne sql select count(1) as c from transactions where blockid='15' and txhash='42dc09fad68ac6427ae91a8680f09b7840323bec73e379146fc392672f42c5e2' and channel_genesis_hash='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723'
+[2019-04-03 12:26:14.230] [DEBUG] pgservice - Insert sql is INSERT INTO transactions  ( "blockid","txhash","createdt","chaincodename","chaincode_id","status","creator_msp_id","endorser_msp_id","type","read_set","write_set","channel_genesis_hash","validation_code","envelope_signature","payload_extension","creator_nonce","chaincode_proposal_input","endorser_signature","creator_id_bytes","payload_proposal_hash","endorser_id_bytes" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21  ) RETURNING *;
+[2019-04-03 12:26:14.233] [DEBUG] pgservice - --------------------------INSERT----------------------------
+[2019-04-03 12:26:14.234] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-04-03 12:26:14.234] [DEBUG] pgservice - update sql is :  update chaincodes set txcount =txcount+1 where channel_genesis_hash='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723'
+[2019-04-03 12:26:14.235] [DEBUG] pgservice - --------------------------UPDATE----------------------------
+[2019-04-03 12:26:14.235] [DEBUG] pgservice -  update result : undefined
+[2019-04-03 12:26:14.235] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-04-03 12:26:14.235] [DEBUG] pgservice - update sql is :  update channel set trans =trans+1 where channel_genesis_hash='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723'
+[2019-04-03 12:26:14.236] [DEBUG] pgservice - --------------------------UPDATE----------------------------
+[2019-04-03 12:26:14.236] [DEBUG] pgservice -  update result : undefined
+[2019-04-03 12:26:14.236] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-04-03 12:26:14.236] [DEBUG] pgservice -  the getRowByPkOne sql select count(1) as c from blocks where blocknum='15' and txcount='1'
+        and channel_genesis_hash='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723' and prehash='4f3ac554de14599306ebf8221e5c19aebf64fdb3435018d895f055564cc21213' and datahash='d707c9287e6e273e93245ef2127395ab8c07704b957447a08cce8da62362facd' 
+[2019-04-03 12:26:14.237] [DEBUG] pgservice - Insert sql is INSERT INTO blocks  ( "blocknum","datahash","prehash","txcount","createdt","prev_blockhash","blockhash","channel_genesis_hash" ) VALUES( $1,$2,$3,$4,$5,$6,$7,$8  ) RETURNING *;
+[2019-04-03 12:26:14.239] [DEBUG] pgservice - --------------------------INSERT----------------------------
+[2019-04-03 12:26:14.239] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-04-03 12:26:14.239] [DEBUG] pgservice - update sql is :  update channel set blocks =blocks+1 where channel_genesis_hash='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723'
+[2019-04-03 12:26:14.240] [DEBUG] pgservice - --------------------------UPDATE----------------------------
+[2019-04-03 12:26:14.240] [DEBUG] pgservice -  update result : undefined
+[2019-04-03 12:26:14.240] [DEBUG] pgservice - -----------------------------------------------------------------
+
+
+[2019-04-03 12:26:46.488] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 15) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723' )
+[2019-04-03 12:27:06.625] [DEBUG] pgservice -  the getRowByPkOne sql  select t.txhash,t.validation_code,t.payload_proposal_hash,t.creator_msp_id,t.endorser_msp_id,t.chaincodename,t.type,t.createdt,t.read_set,
+        t.write_set,channel.name as channelName from TRANSACTIONS as t inner join channel on t.channel_genesis_hash=channel.channel_genesis_hash where t.txhash = '42dc09fad68ac6427ae91a8680f09b7840323bec73e379146fc392672f42c5e2' 
+[2019-04-03 12:29:46.494] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 15) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723' )
+[2019-04-03 12:32:46.499] [DEBUG] pgservice -  the getRowsBySQlQuery SELECT s.id AS missing_id
+    FROM generate_series(0, 15) s(id) WHERE NOT EXISTS (SELECT 1 FROM blocks WHERE blocknum = s.id and channel_genesis_hash ='857a71aa47394a612e7fccde28ab5e3a706ddd5d07fdaec7458d5d9e73ed3723' )

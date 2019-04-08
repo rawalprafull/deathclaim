@@ -5,6 +5,8 @@ var bodyParser = require('body-parser');
 var port = process.env.PORT || process.env.VCAP_APP_PORT || '4000';
 var nano = require('nano')('http://localhost:'+port);var app = express();
 var axios = require("axios");
+const BusinessNetworkConnection = require('composer-client').BusinessNetworkConnection;
+const rp = require('request-promise');
 
 var cloudantUserName = "97db821e-87a4-4507-b8ee-fcc95b72b447-bluemix";
 var cloudantPassword = "ae34609f865eac5720a3e08c9c0208840a9418090a98f9a4c1fcb9fa5573040b";
@@ -13,6 +15,7 @@ var dbCredentials_url = "https://"+cloudantUserName+":"+cloudantPassword+"@"+clo
 //Initialize the library with my account
 var cloudant = require('cloudant')(dbCredentials_url);
 var dbForLogin = cloudant.db.use("deathclaim");
+var dbForTxFlow = cloudant.db.use("deathclaim-tx-flow");
 const accountSid = 'AC19cc0b94578878d44c6b86aa726d6b2a';
 const authToken = '8e799f98253d6382a9acb984149a7dc7';
 const client = require('twilio')(accountSid, authToken);
@@ -38,7 +41,53 @@ app.use('/', express.static(__dirname + '/registration'));
 app.listen(port);
 console.log("server is up on port : "+port);
 
+var pid = { name: 'pid', type: 'json', index: { fields: ['pid'] } };
 
+dbForTxFlow.index(pid, function(er, response) {
+  if(er)
+    console.log('Error creating index on pid : ' + er);
+  else
+    console.log('Index creation result on pid : ' + response.result);
+}); 
+
+
+app.post('/getTxData',function (req,res){
+
+ var id = req.body.pid;
+	
+	
+dbForTxFlow.find({ selector: { pid:id } }, function(err, result) {
+	 if (!err) {
+                     res.json({
+               			 success: true,
+	        	        record: result
+		            });
+                } else {
+                    res.json({
+                                 success: false,
+                                 record: err
+                            });
+                } 
+ });
+});
+
+
+function submitTxFlowData(data){
+
+	   // var dateString = Date();
+           // dateString = new Date(dateString).toUTCString();
+           // data.timestamp = dateString.split(' ').slice(0, 5).join(' ');
+	    data.timestamp = Date.now();	
+	 
+            
+	    dbForTxFlow.insert(data, function(err, data) {
+                if (!err) {
+                    console.log("Transaction inserted into database");
+                } else {
+                    console.log("error while inserting");
+                }
+            });			
+}
 
 app.post('/verifyBeneficiary', function (req, res) {
 
@@ -412,6 +461,12 @@ app.post('/addDeathRecord', function (req, res) {
 
     addDeathRecord(url, reqdata, headers).then(function (data) {
         if (data.success) {
+	
+	    // submitting tx into database
+
+	    data.response.pid = data.response.patientform.pid;
+	    submitTxFlowData(data.response);
+	
             res.json({
                 success: true,
                 deathRecordDetails: data.response
@@ -464,6 +519,11 @@ app.post('/VerifyandNotifyBeneficiary', function (req, res) {
                                 from: '+12512740095',
                                 body: 'Dear Benificiary,for Paitent-'+pid+' please login to portal select funeral home and start death registration process. URL http://ec2-54-205-134-49.compute-1.amazonaws.com:4000',
                                 to: bcontact}).then(message => console.log(message.sid));
+
+	   	
+            // inserting tx into database  
+            data.response.pid = data.response.patientform.split("#")[1]; 
+	    submitTxFlowData(data.response);   
 	
             res.json({
                 success: true,
@@ -499,6 +559,8 @@ app.post('/Beneficiaryupdate', function (req, res) {
 
   var reqdata = req.body;
 
+  console.log(reqdata);
+
    var headers = {
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded'
@@ -509,6 +571,11 @@ app.post('/Beneficiaryupdate', function (req, res) {
 
     Beneficiaryupdate(url, reqdata, headers).then(function (data) {
         if (data.success) {
+		
+            // inserting tx into database
+            data.response.pid = data.response.patientform.split("#")[1];
+            submitTxFlowData(data.response);
+	
             res.json({
                 success: true,
                 RecordDetails: data.response
@@ -551,6 +618,11 @@ app.post('/requestcert', function (req, res) {
 
     requestcert(url, reqdata, headers).then(function (data) {
         if (data.success) {
+		
+	    // inserting tx into database
+            data.response.pid = data.response.patientform.split("#")[1];
+            submitTxFlowData(data.response);
+	
             res.json({
                 success: true,
                 RecordDetails: data.response
@@ -593,6 +665,11 @@ app.post('/providecert' , function (req, res) {
 
     providecert(url, reqdata, headers).then(function (data) {
         if (data.success) {
+
+	    // inserting tx into database
+            data.response.pid = data.response.patientform.split("#")[1];
+            submitTxFlowData(data.response);
+	
             res.json({
                 success: true,
                 RecordDetails: data.response
@@ -637,10 +714,18 @@ app.post('/claiminitiation' , function (req, res) {
 
     requestcert(url, reqdata, headers).then(function (data) {
         if (data.success) {
+	   
+
+	  // inserting tx into database
+            data.response.pid = data.response.patientform.split("#")[1];
+            submitTxFlowData(data.response);
+
+
             res.json({
                 success: true,
                 RecordDetails: data.response
             });
+	console.log(data);
         } else res.json({
             success: false,
             message: data
@@ -774,4 +859,82 @@ var BeneficiaryIdProofupdate = async (url, data, headers) => {
         });
     }
 }
+
+app.post('/getHistory', function (req, res) {
+
+  var reqdata = req.body;
+console.log(reqdata);
+
+   var headers = {
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded'
+        }
+    };
+
+  var url = 'http://ec2-54-205-134-49.compute-1.amazonaws.com:8080/api/org.aetna.insurance.HistoryQuery';
+
+        getHistory(url, reqdata, headers).then(function (data) {
+//	console.log(data);
+        if (data.success) {
+            res.json({
+                success: true,
+                getHistory: data.response
+            });
+        } else res.json({
+            success: false,
+            message: data
+        });
+    });
+});
+
+var getHistory = async (url, data, headers) => {
+   try {
+        var Record = await axios.post(url,data);
+        console.log("Get History  succesfully");
+        return ({
+            success: true,
+            response: Record.data
+        });
+    } catch(error){
+        return ({
+            success: false,
+            message: error
+        });
+    }
+}
+
+
+app.post('/history', async function (req,res){
+	
+	var obj = req.body;
+
+        //var obj = JSON.parse(obj);
+
+        console.log(obj);
+
+    //You can do ANYTHING HERE eg.
+        var options = {
+        method: 'POST',
+        uri: 'http://ec2-54-205-134-49.compute-1.amazonaws.com:8080/api/org.aetna.insurance.HistoryQuery',
+        body: obj,
+        json: true
+    };
+
+try {
+    let results = await rp(options);
+
+    console.log("Return value from REST API is " + results);
+    console.log(`PARTICIPANT HISTORY for Asset ID:  ${results[0]} is: `);
+    console.log("=============================================");
+
+    for (const part of results) {
+         console.log(`${part.pid}` );
+    }
+   }
+catch(err)
+{
+        console.log("----------------"+err);
+}
+
+});
 
